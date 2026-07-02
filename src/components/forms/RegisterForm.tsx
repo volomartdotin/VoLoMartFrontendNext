@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { AnalyticsEvents } from "@/lib/analytics/events";
+import { trackClick } from "@/lib/analytics/track";
 import { categories } from "@/content/vendor";
 
 const categoryOptions = [...categories, "Other"] as const;
@@ -40,6 +42,10 @@ export function RegisterForm() {
         return;
       }
       setStatus("success");
+      trackClick(AnalyticsEvents.registerSubmit, "/register", {
+        shopName: payload.shopName,
+        city: payload.city,
+      });
       form.reset();
     } catch {
       setStatus("error");

@@ -1,11 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { AnalyticsEvents } from "@/lib/analytics/events";
+import { trackClick } from "@/lib/analytics/track";
 import { mainNavLinks } from "@/content/site-nav";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleNavClick = (label: string, href: string) => {
+    trackClick(AnalyticsEvents.headerNavClick, pathname, { label, href });
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/5 bg-white backdrop-blur-sm">
@@ -21,7 +29,7 @@ export function SiteHeader() {
           <ul className="flex items-center gap-8 text-sm font-medium text-[#3D3550]">
             {mainNavLinks.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="transition hover:text-[#8BC34A]">
+                <Link href={item.href} className="transition hover:text-[#8BC34A]" onClick={() => handleNavClick(item.label, item.href)}>
                   {item.label}
                 </Link>
               </li>
@@ -32,6 +40,7 @@ export function SiteHeader() {
         <div className="flex flex-1 items-center justify-end gap-3">
           <Link
             href="/#download-app"
+            onClick={() => handleNavClick("Get the App", "/#download-app")}
             className="hidden rounded-full bg-[#8BC34A] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#74A73D] sm:inline-flex"
           >
             Get the App
@@ -66,7 +75,10 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className="rounded-lg px-3 py-2.5 text-sm font-medium text-[#3D3550] transition hover:bg-[#F3F2F6]"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  handleNavClick(item.label, item.href);
+                  setOpen(false);
+                }}
               >
                 {item.label}
               </Link>

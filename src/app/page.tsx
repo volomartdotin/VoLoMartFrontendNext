@@ -11,6 +11,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { faqSchema, softwareApplicationSchema } from "@/content/seo";
 import { resolveNetworkImageUrl } from "@/lib/image-url";
 import { fetchServiceCategories, type ServiceCategory } from "@/lib/services-api";
+import { AnalyticsEvents } from "@/lib/analytics/events";
+import { trackClick } from "@/lib/analytics/track";
 
 /** Magenta accent — matches current mockups */
 /** Secondary / accent — matches `--accent` in `globals.css` (VoLo Mart warm accent). */
@@ -442,6 +444,12 @@ export default function Home() {
               <p className="mt-1 text-xs text-[#7A7189]">iOS 15.6+</p>
               <a
                 href="#"
+                onClick={() =>
+                  trackClick(AnalyticsEvents.homepageCta, "/", {
+                    platform: "ios",
+                    label: "Download App",
+                  })
+                }
                 className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#8BC34A] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#084236]"
               >
                 Download App
@@ -465,6 +473,12 @@ export default function Home() {
               <p className="mt-1 text-xs text-[#7A7189]">Android 8.0+</p>
               <a
                 href="#"
+                onClick={() =>
+                  trackClick(AnalyticsEvents.homepageCta, "/", {
+                    platform: "android",
+                    label: "Download App",
+                  })
+                }
                 className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#8BC34A] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#084236]"
               >
                 Download App

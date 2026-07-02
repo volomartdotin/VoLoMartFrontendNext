@@ -1,7 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { AnalyticsEvents } from "@/lib/analytics/events";
+import { trackClick } from "@/lib/analytics/track";
 import { legalNavLinks, mainNavLinks } from "@/content/site-nav";
 
 export function SiteFooter() {
+  const pathname = usePathname();
+
+  const handleFooterClick = (label: string, href: string) => {
+    trackClick(AnalyticsEvents.footerLinkClick, pathname, { label, href });
+  };
   return (
     <section
       className="text-[#c9c5d4]"
@@ -119,7 +129,7 @@ export function SiteFooter() {
                 .filter((item) => item.label !== "Contact")
                 .map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="text-[#b8b2c4] transition hover:text-white">
+                    <Link href={item.href} className="text-[#b8b2c4] transition hover:text-white" onClick={() => handleFooterClick(item.label, item.href)}>
                       {item.label}
                     </Link>
                   </li>
@@ -179,7 +189,7 @@ export function SiteFooter() {
             {legalNavLinks.map((item, index) => (
               <span key={item.href} className="flex items-center gap-2">
                 {index > 0 ? <span>|</span> : null}
-                <Link href={item.href} className="hover:text-white">
+                <Link href={item.href} className="hover:text-white" onClick={() => handleFooterClick(item.label, item.href)}>
                   {item.label}
                 </Link>
               </span>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { AnalyticsEvents } from "@/lib/analytics/events";
+import { trackClick } from "@/lib/analytics/track";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -32,6 +34,7 @@ export function ContactForm() {
         return;
       }
       setStatus("success");
+      trackClick(AnalyticsEvents.contactSubmit, "/contact");
       form.reset();
     } catch {
       setStatus("error");

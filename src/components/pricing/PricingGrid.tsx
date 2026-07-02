@@ -13,6 +13,8 @@ import {
   getPriceForCycle,
   type Plan,
 } from "@/lib/plans-api";
+import { AnalyticsEvents } from "@/lib/analytics/events";
+import { trackClick } from "@/lib/analytics/track";
 
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.volomart.app";
@@ -200,6 +202,13 @@ export function PricingGrid() {
                   href={PLAY_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
+                      planId: plan.id,
+                      planName: plan.name,
+                      platform: "android",
+                    })
+                  }
                   className={`block rounded-xl px-4 py-3 text-center text-sm font-semibold transition ${
                     isPopular
                       ? "bg-[#8BC34A] text-white hover:bg-[#74A73D]"
@@ -212,6 +221,13 @@ export function PricingGrid() {
                   href={APP_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
+                      planId: plan.id,
+                      planName: plan.name,
+                      platform: "ios",
+                    })
+                  }
                   className="block rounded-xl border border-[#E2E8E4] px-4 py-3 text-center text-sm font-medium text-[#21153a] transition hover:bg-[#F3F2F6]"
                 >
                   Get on iOS
