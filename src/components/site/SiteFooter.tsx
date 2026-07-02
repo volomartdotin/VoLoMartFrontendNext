@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { mainNavLinks } from "@/content/site-nav";
+import { legalNavLinks, mainNavLinks } from "@/content/site-nav";
 
 export function SiteFooter() {
   return (
@@ -176,21 +176,14 @@ export function SiteFooter() {
         <div className="mx-auto mt-8 flex w-full max-w-6xl flex-col gap-3 border-t border-white/10 px-4 py-5 text-xs text-[#a5a0b1] sm:flex-row sm:items-center sm:justify-between lg:px-6">
           <p>Copyright © 2026 VoLo Mart. All Rights Reserved.</p>
           <div className="flex flex-wrap items-center gap-2">
-            <Link href="/privacy-policy-customers" className="hover:text-white">
-              Privacy Policy
-            </Link>
-            <span>|</span>
-            <Link href="/terms-of-service-customers" className="hover:text-white">
-              Terms of Service
-            </Link>
-            <span>|</span>
-            <Link href="/privacy-policy-vendors" className="hover:text-white">
-              Vendor Privacy
-            </Link>
-            <span>|</span>
-            <Link href="/terms-of-service-vendors" className="hover:text-white">
-              Vendor Terms
-            </Link>
+            {legalNavLinks.map((item, index) => (
+              <span key={item.href} className="flex items-center gap-2">
+                {index > 0 ? <span>|</span> : null}
+                <Link href={item.href} className="hover:text-white">
+                  {item.label}
+                </Link>
+              </span>
+            ))}
           </div>
         </div>
       </footer>

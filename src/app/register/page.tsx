@@ -35,7 +35,11 @@ export default function RegisterPage() {
           <Link href="/privacy" className="text-brand hover:underline">
             Privacy
           </Link>{" "}
-          policy.
+          policy. View{" "}
+          <Link href="/pricing" className="text-brand hover:underline">
+            subscription plans
+          </Link>
+          .
         </p>
       </div>
     </div>

@@ -9,6 +9,7 @@ export const site = {
 export const nav = [
   { label: "Why VoLo", href: "/#why" },
   { label: "How it works", href: "/#how" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Categories", href: "/#categories" },
   { label: "FAQ", href: "/#faq" },
 ] as const;

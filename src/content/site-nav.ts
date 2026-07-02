@@ -7,6 +7,16 @@ export const mainNavLinks = [
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Top Services", href: "/#services" },
   { label: "Testimonials", href: "/#testimonials" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog-hub" },
   { label: "Contact", href: "/#contact" },
+] as const;
+
+/** Standalone marketing pages (terms, privacy, pricing, etc.) */
+export const legalNavLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy-customers" },
+  { label: "Terms of Service", href: "/terms-of-service-customers" },
+  { label: "Vendor Pricing", href: "/pricing" },
+  { label: "Vendor Privacy", href: "/privacy-policy-vendors" },
+  { label: "Vendor Terms", href: "/terms-of-service-vendors" },
 ] as const;
