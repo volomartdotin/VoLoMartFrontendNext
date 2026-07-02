@@ -39,6 +39,7 @@ export const fallbackPlans: Plan[] = [
     description: "Growing stores with more inventory",
     productLimit: 100,
     isTrial: false,
+    isPopular: true,
     features: ["Up to 100 products", "Vendor dashboard", "Order management", "Priority support"],
     prices: [price(29900, "MONTHLY", "starter"), price(299900, "YEARLY", "starter")],
   },

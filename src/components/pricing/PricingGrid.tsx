@@ -153,7 +153,7 @@ export function PricingGrid() {
       <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {paidPlans.map((plan) => {
           const price = getPriceForCycle(plan, yearly);
-          const isPopular = plan.slug === POPULAR_PLAN_SLUG;
+          const isPopular = plan.isPopular ?? plan.slug === POPULAR_PLAN_SLUG;
           const savings = yearlySavingsPercent(plan);
 
           return (

@@ -33,4 +33,4 @@ export const pricingCopy = {
 
 export const DOWNLOAD_APP_HREF = "/#download-app";
 
-export const POPULAR_PLAN_SLUG = "growth";
+export const POPULAR_PLAN_SLUG = "starter";

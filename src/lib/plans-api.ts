@@ -17,11 +17,14 @@ export type Plan = {
   features: string[];
   isTrial: boolean;
   trialDays?: number;
+  isPopular?: boolean;
+  isCurrent?: boolean;
   prices: PlanPrice[];
 };
 
 type PlansData = {
   plans: Plan[];
+  currentPlanId?: string | null;
 };
 
 export async function fetchPlans(): Promise<Plan[]> {
