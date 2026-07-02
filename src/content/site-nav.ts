@@ -12,7 +12,7 @@ export const mainNavLinks = [
   { label: "Contact", href: "/#contact" },
 ] as const;
 
-/** Standalone marketing pages (terms, privacy, pricing, etc.) */
+/** Standalone public pages (terms, privacy, pricing, etc.) */
 export const legalNavLinks = [
   { label: "Privacy Policy", href: "/privacy-policy-customers" },
   { label: "Terms of Service", href: "/terms-of-service-customers" },

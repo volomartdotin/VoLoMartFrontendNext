@@ -223,11 +223,7 @@ export function PricingGrid() {
       </div>
 
       <p className="mt-10 text-center text-sm leading-relaxed text-[#5c6b63]">
-        {pricingCopy.footerNote}{" "}
-        <Link href={DOWNLOAD_APP_HREF} className="font-semibold text-[#5A7F30] hover:underline">
-          Download the app
-        </Link>
-        .
+        {pricingCopy.footerNote}
       </p>
     </div>
   );

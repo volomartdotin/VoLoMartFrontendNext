@@ -1,5 +1,5 @@
 import { FaqItem } from "@/components/FaqItem";
-import { DOWNLOAD_APP_HREF, pricingCopy } from "@/content/pricing";
+import { pricingCopy } from "@/content/pricing";
 
 export function PricingFaq() {
   return (
@@ -14,11 +14,7 @@ export function PricingFaq() {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-[#5c6b63]">
-          Questions about onboarding?{" "}
-          <a href={DOWNLOAD_APP_HREF} className="font-semibold text-[#5A7F30] hover:underline">
-            Get the app
-          </a>{" "}
-          or email{" "}
+          Questions about onboarding? Email{" "}
           <a href="mailto:support@volomart.in" className="font-semibold text-[#5A7F30] hover:underline">
             support@volomart.in
           </a>

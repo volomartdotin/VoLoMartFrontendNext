@@ -1,5 +1,5 @@
 /**
- * Backend API base URL for VoLo Mart marketing site.
+ * Backend API base URL for the VoLo Mart vendor site.
  * Set in `.env.local` (dev) or deployment env (production):
  *
  *   NEXT_PUBLIC_API_URL=https://back.volomart.in

@@ -6,12 +6,12 @@ export const pricingCopy = {
   yearlyBadge: "Save up to 17% with yearly billing",
   popularLabel: "Most popular",
   footerNote:
-    "Subscriptions are managed securely in the VoLo Mart vendor app. Download the app to register your shop and choose a plan.",
+    "Subscriptions are managed securely in the VoLo Mart vendor app. Register your shop and choose a plan when you are ready.",
   faqTitle: "Frequently asked questions",
   faqs: [
     {
       q: "How does the free trial work?",
-      a: "New vendors receive 7 days of full access with up to 20 products. No payment is required to start. Download the app, register your shop, and begin listing products immediately.",
+      a: "New vendors receive 7 days of full access with up to 20 products. No payment is required to start. Register your shop in the app and begin listing products immediately.",
     },
     {
       q: "When do I need to upgrade?",
@@ -23,12 +23,9 @@ export const pricingCopy = {
     },
     {
       q: "Where do I complete payment?",
-      a: "All subscription payments are completed in the VoLo Mart vendor mobile app using secure Razorpay checkout. This marketing page displays current plan prices for reference.",
+      a: "All subscription payments are completed in the VoLo Mart vendor mobile app using secure Razorpay checkout. Plan prices shown here match what you will see in the app.",
     },
   ],
-  cta: {
-    button: "Download the app",
-  },
 } as const;
 
 export const DOWNLOAD_APP_HREF = "/#download-app";
