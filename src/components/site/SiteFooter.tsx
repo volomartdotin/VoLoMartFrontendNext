@@ -34,7 +34,7 @@ export function SiteFooter() {
             Join Early Access
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-xs leading-relaxed text-white/80 md:text-sm">
-            Sign up as a customer or vendor and be the first to know when VoLo Mart goes live.
+            Sign up as a customer or vendor and be the first to know when VoLoMart goes live.
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
             <EarlyAccessTrigger
@@ -57,8 +57,8 @@ export function SiteFooter() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12 lg:px-6">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2.5 text-white">
-              <img src="/volo-mart-logo.png" alt="VoLo Mart logo" className="h-10 w-10 object-cover" />
-              <span className="text-lg font-bold tracking-tight">VoLo Mart</span>
+              <img src="/volo-mart-logo.png" alt="VoLoMart logo" className="h-10 w-10 object-cover" />
+              <span className="text-lg font-bold tracking-tight">VoLoMart</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#9e97ab]">
               Hyperlocal marketplace connecting customers with trusted nearby vendors for faster delivery and better
@@ -159,13 +159,13 @@ export function SiteFooter() {
 
           <div className="sm:col-span-2 lg:col-span-1">
             <p className="text-sm font-bold text-white">Subscribe</p>
-            <p className="mt-3 text-sm text-[#b8b2c4]">Get latest updates and offers from VoLo Mart.</p>
+            <p className="mt-3 text-sm text-[#b8b2c4]">Get latest updates and offers from VoLoMart.</p>
             <SubscribeForm />
           </div>
         </div>
 
         <div className="mx-auto mt-8 flex w-full max-w-6xl flex-col gap-3 border-t border-white/10 px-4 py-5 text-xs text-[#a5a0b1] sm:flex-row sm:items-center sm:justify-between lg:px-6">
-          <p>Copyright © 2026 VoLo Mart. All Rights Reserved.</p>
+          <p>Copyright © 2026 VoLoMart. All Rights Reserved.</p>
           <div className="flex flex-wrap items-center gap-2">
             {legalNavLinks.map((item, index) => (
               <span key={item.href} className="flex items-center gap-2">

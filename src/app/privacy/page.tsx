@@ -4,7 +4,7 @@ import { site } from "@/content/vendor";
 
 export const metadata: Metadata = {
   title: "Privacy policy",
-  description: "How VoLo Mart handles information collected through this marketing site and vendor inquiries.",
+  description: "How VoLoMart handles information collected through this marketing site and vendor inquiries.",
   alternates: { canonical: "/privacy" },
 };
 

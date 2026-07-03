@@ -17,11 +17,11 @@ const customerBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "VoLo Mart operates as a marketplace facilitator connecting customers with local vendors while maintaining clear liability boundaries and service expectations.",
+    text: "VoLoMart operates as a marketplace facilitator connecting customers with local vendors while maintaining clear liability boundaries and service expectations.",
   },
   {
     type: "p",
-    text: "VoLo Mart serves as your gateway to local commerce, connecting you with verified vendors in your neighborhood. We facilitate transactions between customers and vendors while maintaining platform integrity and user safety.",
+    text: "VoLoMart serves as your gateway to local commerce, connecting you with verified vendors in your neighborhood. We facilitate transactions between customers and vendors while maintaining platform integrity and user safety.",
   },
   {
     type: "p",
@@ -168,7 +168,7 @@ const customerBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "VoLo Mart maintains a respectful community environment. Users are expected to communicate professionally, provide honest feedback, and contribute positively to the local commerce ecosystem.",
+    text: "VoLoMart maintains a respectful community environment. Users are expected to communicate professionally, provide honest feedback, and contribute positively to the local commerce ecosystem.",
   },
   {
     type: "h2",
@@ -180,7 +180,7 @@ const customerBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "Reviews, photos, and comments submitted by customers remain their intellectual property. VoLo Mart is granted limited usage rights for platform improvement and marketing purposes with appropriate attribution.",
+    text: "Reviews, photos, and comments submitted by customers remain their intellectual property. VoLoMart is granted limited usage rights for platform improvement and marketing purposes with appropriate attribution.",
   },
   {
     type: "p",
@@ -204,7 +204,7 @@ const customerBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "VoLo Mart facilitates connections between customers and vendors but does not directly control product quality, availability, or vendor business practices. Understanding these boundaries helps set appropriate expectations.",
+    text: "VoLoMart facilitates connections between customers and vendors but does not directly control product quality, availability, or vendor business practices. Understanding these boundaries helps set appropriate expectations.",
   },
   {
     type: "h3",
@@ -233,7 +233,7 @@ const customerBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "VoLo Mart's liability is limited to facilitating marketplace transactions. Product-related issues, delivery problems caused by vendor delays, and quality concerns are primarily vendor responsibilities, though we provide support for resolution.",
+    text: "VoLoMart's liability is limited to facilitating marketplace transactions. Product-related issues, delivery problems caused by vendor delays, and quality concerns are primarily vendor responsibilities, though we provide support for resolution.",
   },
   {
     type: "h2",
@@ -350,7 +350,7 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "VoLo Mart maintains strict quality standards across all product categories. Vendors must demonstrate consistent quality delivery and comply with category-specific guidelines.",
+    text: "VoLoMart maintains strict quality standards across all product categories. Vendors must demonstrate consistent quality delivery and comply with category-specific guidelines.",
   },
   {
     type: "h3",
@@ -408,11 +408,11 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "h3",
-    text: "Completely Free - Zero Charges Policy",
+    text: "Completely Free: Zero Charges Policy",
   },
   {
     type: "p",
-    text: "VoLo Mart operates on a completely free model - we take no cut from your sales and charge no transaction fees. You keep 100% of your revenue with zero platform charges. This policy is free forever with no hidden fees or monthly charges.",
+    text: "VoLoMart operates on a completely free model. We take no cut from your sales and charge no transaction fees. You keep 100% of your revenue with zero platform charges. This policy is free forever with no hidden fees or monthly charges.",
   },
   {
     type: "ul",
@@ -470,7 +470,7 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "All product listings must comply with local regulations including food safety standards, labeling requirements, and business licensing. VoLo Mart provides guidance but vendors remain responsible for regulatory compliance.",
+    text: "All product listings must comply with local regulations including food safety standards, labeling requirements, and business licensing. VoLoMart provides guidance but vendors remain responsible for regulatory compliance.",
   },
   {
     type: "h2",
@@ -602,7 +602,7 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "VoLo Mart respects and protects vendor intellectual property including trademarks, product images, and proprietary information. Vendors retain full ownership while granting limited platform usage rights.",
+    text: "VoLoMart respects and protects vendor intellectual property including trademarks, product images, and proprietary information. Vendors retain full ownership while granting limited platform usage rights.",
   },
   {
     type: "h3",
@@ -632,7 +632,7 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "Limited usage rights allow VoLo Mart to display vendor content effectively while ensuring vendors can transition seamlessly if they choose to leave the platform, with full content ownership retained.",
+    text: "Limited usage rights allow VoLoMart to display vendor content effectively while ensuring vendors can transition seamlessly if they choose to leave the platform, with full content ownership retained.",
   },
   {
     type: "h2",
@@ -664,7 +664,7 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "Extensive training programs cover platform usage, business optimization, customer service, and growth strategies. Regular workshops and one-on-one support help vendors maximize their success on VoLo Mart.",
+    text: "Extensive training programs cover platform usage, business optimization, customer service, and growth strategies. Regular workshops and one-on-one support help vendors maximize their success on VoLoMart.",
   },
   {
     type: "h3",
@@ -699,7 +699,7 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "VoLo Mart provides ongoing support for vendor growth including marketing assistance, business development guidance, and technology upgrades to ensure long-term partnership success.",
+    text: "VoLoMart provides ongoing support for vendor growth including marketing assistance, business development guidance, and technology upgrades to ensure long-term partnership success.",
   },
   {
     type: "h2",
@@ -707,20 +707,20 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "p",
-    text: "Join thousands of successful vendors growing their business with VoLo Mart. For expert guidance for your business, contact our vendor support team at support@volomart.in.",
+    text: "Join thousands of successful vendors growing their business with VoLoMart. For expert guidance for your business, contact our vendor support team at support@volomart.in.",
   },
 ];
 
 export const customerTerms: TermsOfServicePage = {
   slug: "customers",
-  title: "Terms of Service - For Customers",
-  subtitle: "Clear expectations and protections for your VoLo Mart shopping experience.",
+  title: "Terms of Service for Customers",
+  subtitle: "Clear expectations and protections for your VoLoMart shopping experience.",
   lastUpdated: "Last updated: October 2, 2025 • Effective from: October 2, 2025",
   coverImage:
     "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=1200&q=80",
   tldr: [
-    "VoLo Mart facilitates orders and delivery coordination, while product quality, availability, and fulfillment remain vendor responsibilities.",
-    "Use the platform responsibly—accurate account info, no fake reviews, no fraud—or risk suspension and account termination.",
+    "VoLoMart facilitates orders and delivery coordination, while product quality, availability, and fulfillment remain vendor responsibilities.",
+    "Use the platform responsibly with accurate account info, no fake reviews, and no fraud, or risk suspension and account termination.",
     "You keep ownership of your reviews and photos; questions about these terms can go to support@volomart.in.",
   ],
   blocks: customerBlocks,
@@ -729,13 +729,13 @@ export const customerTerms: TermsOfServicePage = {
 export const vendorTerms: TermsOfServicePage = {
   slug: "vendors",
   title: "Vendor Agreement",
-  subtitle: "Comprehensive framework for successful vendor partnerships on VoLo Mart.",
+  subtitle: "Comprehensive framework for successful vendor partnerships on VoLoMart.",
   lastUpdated: "Last updated: October 2, 2025 • Effective from: October 2, 2025",
   coverImage:
     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
   tldr: [
     "Vendors need valid licensing and must meet category and quality standards; prohibited items trigger immediate suspension and legal action.",
-    "Zero charges forever—no commission, no transaction fees, no monthly or hidden costs—so you keep 100% of your revenue.",
+    "Zero charges forever with no commission, no transaction fees, and no monthly or hidden costs, so you keep 100% of your revenue.",
     "Meet fulfillment, communication, and performance standards (≥95% accuracy, ≥4.0 rating); support is available at support@volomart.in.",
   ],
   blocks: vendorBlocks,

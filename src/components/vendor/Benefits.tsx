@@ -5,7 +5,7 @@ export function Benefits() {
     <section className="border-y border-border bg-card">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <h2 className="max-w-xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          Everything you need to run local—without the chaos
+          Everything you need to run local without the chaos
         </h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((b) => (

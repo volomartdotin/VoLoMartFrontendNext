@@ -27,13 +27,13 @@ const notoDevanagari = Noto_Sans_Devanagari({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.volomart.in";
 
 const description =
-  "VoLo Mart is India's hyperlocal marketplace connecting customers with trusted nearby vendors for grocery, vegetables, fruit, dairy, namkeen, and flowers—with fast local delivery.";
+  "VoLoMart is India's hyperlocal marketplace connecting customers with trusted nearby vendors for grocery, vegetables, fruit, dairy, namkeen, and flowers, with fast local delivery.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "VoLo Mart | Your Ultimate Local Marketplace",
-    template: "%s | VoLo Mart",
+    default: "VoLoMart | Your Ultimate Local Marketplace",
+    template: "%s | VoLoMart",
   },
   description,
   keywords: [
@@ -43,17 +43,22 @@ export const metadata: Metadata = {
     "neighborhood shops",
     "vegetable delivery",
     "vocal for local",
-    "VoLo Mart",
+    "VoLoMart",
     "local commerce India",
   ],
-  applicationName: "VoLo Mart",
+  applicationName: "VoLoMart",
+  icons: {
+    icon: [{ url: "/volo-mart-logo.png", type: "image/png" }],
+    apple: [{ url: "/volo-mart-logo.png", type: "image/png" }],
+    shortcut: ["/volo-mart-logo.png"],
+  },
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    siteName: "VoLo Mart",
-    title: "VoLo Mart | Your Ultimate Local Marketplace",
+    siteName: "VoLoMart",
+    title: "VoLoMart | Your Ultimate Local Marketplace",
     description,
     url: siteUrl,
     locale: "en_IN",
@@ -62,7 +67,7 @@ export const metadata: Metadata = {
         url: "/volo-mart-logo.png",
         width: 512,
         height: 512,
-        alt: "VoLo Mart logo",
+        alt: "VoLoMart logo",
       },
     ],
   },
@@ -70,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@volomartin",
     creator: "@volomartin",
-    title: "VoLo Mart | Your Ultimate Local Marketplace",
+    title: "VoLoMart | Your Ultimate Local Marketplace",
     description,
     images: ["/volo-mart-logo.png"],
   },

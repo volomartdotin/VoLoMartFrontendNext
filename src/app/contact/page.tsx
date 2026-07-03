@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Reach the VoLo Mart team for vendor onboarding, partnerships, and support.",
+  description: "Reach the VoLoMart team for vendor onboarding, partnerships, and support.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: `Contact | ${site.name}`,

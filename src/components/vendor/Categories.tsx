@@ -6,7 +6,7 @@ export function Categories() {
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Categories we love to onboard</h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/80">
-          If you serve the neighborhood with freshness and speed, there’s likely a place for you on VoLo Mart.
+          If you serve the neighborhood with freshness and speed, there’s likely a place for you on VoLoMart.
         </p>
         <ul className="mt-10 flex flex-wrap gap-3">
           {categories.map((c) => (

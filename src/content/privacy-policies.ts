@@ -224,8 +224,8 @@ export const customerPrivacyPolicy: PrivacyPolicyPage = {
   coverImage:
     "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
   tldr: [
-    "We collect account, order, location, and support data needed to run VoLo Mart and fulfill deliveries.",
-    "Your data is used for orders, nearby vendor discovery, service improvement, and support—not sold to unrelated third parties.",
+    "We collect account, order, location, and support data needed to run VoLoMart and fulfill deliveries.",
+    "Your data is used for orders, nearby vendor discovery, service improvement, and support. It is not sold to unrelated third parties.",
     "You can request access, correction, deletion, and opt out of marketing; contact support@volomart.in for help.",
   ],
   blocks: customerBlocks,
@@ -240,7 +240,7 @@ export const vendorPrivacyPolicy: PrivacyPolicyPage = {
     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
   tldr: [
     "We collect shop, catalog, order, location, and performance data to operate the marketplace.",
-    "Competitive and customer data are isolated—vendors only receive what they need to fulfill orders.",
+    "Competitive and customer data are isolated. Vendors only receive what they need to fulfill orders.",
     "Retention periods follow legal and operational requirements; you may request export, correction, or deletion where applicable.",
   ],
   blocks: vendorBlocks,

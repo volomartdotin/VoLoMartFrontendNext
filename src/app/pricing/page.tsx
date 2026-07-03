@@ -7,7 +7,7 @@ import { site } from "@/content/vendor";
 export const metadata: Metadata = {
   title: "Vendor pricing",
   description:
-    "VoLo Mart vendor subscription plans — 7-day free trial and flexible monthly or yearly plans for local shops.",
+    "VoLoMart vendor subscription plans with a 7-day free trial and flexible monthly or yearly plans for local shops.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: `Vendor pricing | ${site.name}`,

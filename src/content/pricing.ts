@@ -2,11 +2,11 @@ export const pricingCopy = {
   badge: "Vendor plans",
   title: "Simple, transparent pricing for local shops",
   subtitle:
-    "Start with a 7-day free trial. Upgrade when your catalog grows — no hidden fees, cancel anytime from the app.",
+    "Start with a 7-day free trial. Upgrade when your catalog grows. No hidden fees, and you can cancel anytime from the app.",
   yearlyBadge: "Save up to 17% with yearly billing",
   popularLabel: "Most popular",
   footerNote:
-    "Subscriptions are managed securely in the VoLo Mart vendor app. Register your shop and choose a plan when you are ready.",
+    "Subscriptions are managed securely in the VoLoMart vendor app. Register your shop and choose a plan when you are ready.",
   faqTitle: "Frequently asked questions",
   faqs: [
     {
@@ -15,7 +15,7 @@ export const pricingCopy = {
     },
     {
       q: "When do I need to upgrade?",
-      a: "After your trial ends, or when you reach your product limit, you can select a paid plan from the app. Your existing products remain safe — you only need an active plan to publish new ones.",
+      a: "After your trial ends, or when you reach your product limit, you can select a paid plan from the app. Your existing products remain safe. You only need an active plan to publish new ones.",
     },
     {
       q: "Can I switch between monthly and yearly?",
@@ -23,7 +23,7 @@ export const pricingCopy = {
     },
     {
       q: "Where do I complete payment?",
-      a: "All subscription payments are completed in the VoLo Mart vendor mobile app using secure Razorpay checkout. Plan prices shown here match what you will see in the app.",
+      a: "All subscription payments are completed in the VoLoMart vendor mobile app using secure Razorpay checkout. Plan prices shown here match what you will see in the app.",
     },
   ],
 } as const;

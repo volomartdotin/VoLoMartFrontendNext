@@ -56,7 +56,7 @@ export function RegisterForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-brand/30 bg-brand-light/50 p-8 text-center">
-        <p className="text-lg font-semibold text-brand-dark">Thanks—we received your details.</p>
+        <p className="text-lg font-semibold text-brand-dark">Thanks! We received your details.</p>
         <p className="mt-2 text-sm text-muted">
           Our team will contact you shortly to verify your shop and help you go live.
         </p>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { BlogListClient } from "@/components/blog/BlogListClient";
 
 const blogDescription =
-  "Stories, updates, and insights from the VoLo Mart team on hyperlocal commerce in India.";
+  "Stories, updates, and insights from the VoLoMart team on hyperlocal commerce in India.";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog-hub" },
   openGraph: {
     type: "website",
-    title: "VoLo Mart Blog",
+    title: "VoLoMart Blog",
     description: blogDescription,
     url: "/blog-hub",
   },

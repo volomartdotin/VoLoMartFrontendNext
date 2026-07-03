@@ -21,8 +21,8 @@ export function SiteHeader() {
       <div className="flex w-full items-center gap-4 px-4 py-3 sm:px-6">
         <div className="flex flex-1 justify-start">
           <Link href="/" className="flex items-center gap-2.5 text-[#1E1533]">
-            <img src="/volo-mart-logo.png" alt="VoLo Mart logo" className="h-10 w-10 object-cover" />
-            <span className="text-lg font-bold tracking-tight">VoLo Mart</span>
+            <img src="/volo-mart-logo.png" alt="VoLoMart logo" className="h-10 w-10 object-cover" />
+            <span className="text-lg font-bold tracking-tight">VoLoMart</span>
           </Link>
         </div>
 

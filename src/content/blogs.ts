@@ -7,10 +7,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "priya-sharma-flower-shop-hyperlocal-success",
     category: "Stories",
-    title: "How a Neighborhood Florist Grew Daily Orders 3× with VoLo Mart",
+    title: "How a Neighborhood Florist Grew Daily Orders 3× with VoLoMart",
     excerpt:
-      "Priya Sharma ran a beloved corner flower shop for twelve years. With VoLo Mart, she reached new customers blocks away—without hiring a tech team or rebuilding her shop from scratch.",
-    author: "VoLo Mart Team",
+      "Priya Sharma ran a beloved corner flower shop for twelve years. With VoLoMart, she reached new customers blocks away without hiring a tech team or rebuilding her shop from scratch.",
+    author: "VoLoMart Team",
     date: "April 15, 2026",
     readTime: "7 min read",
     coverImage: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80",
@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     ],
     tldr: [
       "Hyperlocal commerce is growing fast, but most neighborhood vendors still juggle WhatsApp lists, phone calls, and walk-in traffic alone.",
-      "Priya Sharma, a florist in Pune, listed on VoLo Mart and tripled weekday orders within eight weeks—without any coding experience.",
+      "Priya Sharma, a florist in Pune, listed on VoLoMart and tripled weekday orders within eight weeks without any coding experience.",
       "The result: steadier revenue, repeat customers who discover her through the app, and more time spent arranging flowers instead of chasing payments.",
     ],
     blocks: [
@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "For over a decade, Priya Sharma’s shop—Gulmohar Flowers—was the go-to spot for garlands, bouquets, and festival orders in her lane. Walk-ins knew her by name. What she didn’t have was a simple way to reach buyers three kilometers away who would happily order local—if they could find her.",
+        text: "For over a decade, Priya Sharma’s shop, Gulmohar Flowers, was the go-to spot for garlands, bouquets, and festival orders in her lane. Walk-ins knew her by name. What she didn’t have was a simple way to reach buyers three kilometers away who would happily order local if they could find her.",
       },
       {
         type: "p",
@@ -41,24 +41,24 @@ export const blogPosts: BlogPost[] = [
         type: "img",
         src: "https://images.unsplash.com/photo-1455659817273-f96807779a8a?auto=format&fit=crop&w=1200&q=80",
         alt: "Fresh flowers arranged at a local market stall",
-        caption: "Gulmohar Flowers—same quality, wider neighborhood reach.",
+        caption: "Gulmohar Flowers: same quality, wider neighborhood reach.",
       },
       {
         type: "h2",
-        text: "The Solution: VoLo Mart for Neighborhood Sellers",
+        text: "The Solution: VoLoMart for Neighborhood Sellers",
       },
       {
         type: "p",
-        text: "Rather than building a custom app or paying for ads that didn’t convert, Priya registered on VoLo Mart in an afternoon. She uploaded her catalog—marigold garlands, rose bouquets, condolence wreaths—and set delivery slots that matched how she already worked.",
+        text: "Rather than building a custom app or paying for ads that didn’t convert, Priya registered on VoLoMart in an afternoon. She uploaded her catalog with marigold garlands, rose bouquets, and condolence wreaths, and set delivery slots that matched how she already worked.",
       },
       {
         type: "quote",
-        text: "I thought going online meant hiring someone to build a website. VoLo Mart felt like listing my shop on a map that customers already use. Within a week I had orders from streets I had never delivered to before.",
+        text: "I thought going online meant hiring someone to build a website. VoLoMart felt like listing my shop on a map that customers already use. Within a week I had orders from streets I had never delivered to before.",
         attribution: "Priya Sharma, Gulmohar Flowers",
       },
       {
         type: "p",
-        text: "Location-based discovery put her in front of nearby buyers searching for “flowers” and “garlands.” Clear order details let customers confirm colors and timing without endless phone tag. Structured orders replaced screenshot chaos—and payouts landed on a predictable schedule.",
+        text: "Location-based discovery put her in front of nearby buyers searching for “flowers” and “garlands.” Clear order details let customers confirm colors and timing without endless phone tag. Structured orders replaced screenshot chaos, and payouts landed on a predictable schedule.",
       },
       {
         type: "h3",
@@ -79,15 +79,15 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Eight weeks in, weekday orders were roughly three times what they had been before listing. More importantly, Priya kept the relationship-led experience that made Gulmohar special—she just gained a reliable channel for people who don’t pass her storefront every day.",
+        text: "Eight weeks in, weekday orders were roughly three times what they had been before listing. More importantly, Priya kept the relationship-led experience that made Gulmohar special. She just gained a reliable channel for people who don’t pass her storefront every day.",
       },
       {
         type: "p",
-        text: "Other vendors on her street noticed. Two now list dairy and sweets on VoLo Mart; customers bundle orders from familiar names instead of defaulting to faceless marketplaces.",
+        text: "Other vendors on her street noticed. Two now list dairy and sweets on VoLoMart; customers bundle orders from familiar names instead of defaulting to faceless marketplaces.",
       },
       {
         type: "quote",
-        text: "The biggest barrier for shops like mine was not quality—it was visibility. VoLo Mart didn’t replace my counter. It extended it.",
+        text: "The biggest barrier for shops like mine was not quality. It was visibility. VoLoMart didn’t replace my counter. It extended it.",
         attribution: "Priya Sharma",
       },
       {
@@ -96,11 +96,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Priya plans to add subscription garlands for temples and corporate lobby clients through VoLo Mart’s repeat-order flow. She’s also mentoring two first-time sellers in her market on how to photograph products and set honest delivery windows.",
+        text: "Priya plans to add subscription garlands for temples and corporate lobby clients through VoLoMart’s repeat-order flow. She’s also mentoring two first-time sellers in her market on how to photograph products and set honest delivery windows.",
       },
       {
         type: "p",
-        text: "VoLo Mart is onboarding florists, grocers, produce sellers, dairy counters, and specialty food shops across India. If you run a neighborhood store customers already trust, listing is free on our starter program—register your shop and we’ll help you go live.",
+        text: "VoLoMart is onboarding florists, grocers, produce sellers, dairy counters, and specialty food shops across India. If you run a neighborhood store customers already trust, listing is free on our starter program. Register your shop and we’ll help you go live.",
       },
       {
         type: "h2",
@@ -115,17 +115,17 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "vocal-for-local-transforming-neighborhood-commerce",
     category: "Vocal For Local",
-    title: "Vocal for Local: How VoLo Mart is Transforming Neighborhood Commerce",
+    title: "Vocal for Local: How VoLoMart is Transforming Neighborhood Commerce",
     excerpt:
-      "Discover how VoLo Mart's hyperlocal platform is empowering local vendors and creating stronger communities through digital innovation and traditional values.",
-    author: "VoLo Mart Team",
+      "Discover how VoLoMart's hyperlocal platform is empowering local vendors and creating stronger communities through digital innovation and traditional values.",
+    author: "VoLoMart Team",
     date: "March 28, 2026",
     readTime: "6 min read",
     coverImage: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["community-first-neighborhood-bonds", "neighborhood-vendors-heart-of-local-commerce"],
     tldr: [
       "India’s Vocal for Local movement is strongest when technology meets existing neighborhood trust.",
-      "VoLo Mart connects kirana, produce, dairy, and specialty sellers with buyers who want local—not generic.",
+      "VoLoMart connects kirana, produce, dairy, and specialty sellers with buyers who want local, not generic.",
       "The platform keeps margins with vendors while making discovery and ordering as easy as any national app.",
     ],
     blocks: [
@@ -135,14 +135,14 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Customers choose neighborhood shops for freshness, flexibility, and relationships. VoLo Mart doesn’t ask vendors to become warehouses—it gives them digital shelf space, order tools, and delivery support that respect how they already operate.",
+        text: "Customers choose neighborhood shops for freshness, flexibility, and relationships. VoLoMart doesn’t ask vendors to become warehouses. It gives them digital shelf space, order tools, and delivery support that respect how they already operate.",
       },
       {
         type: "ul",
         items: [
           "List your real catalog with photos and honest stock.",
           "Serve buyers within roughly 3 km who value proximity.",
-          "Keep the personal touch—note substitutions clearly on each order.",
+          "Keep the personal touch. Note substitutions clearly on each order.",
           "Grow repeat business without expensive ad spends.",
         ],
       },
@@ -152,24 +152,24 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "From festival spikes to daily milk runs, VoLo Mart’s flows mirror how Indian households actually shop: mixed baskets, urgent top-ups, and trusted names on the corner. That’s Vocal for Local in practice—not a slogan on a billboard.",
+        text: "From festival spikes to daily milk runs, VoLoMart’s flows mirror how Indian households actually shop: mixed baskets, urgent top-ups, and trusted names on the corner. That’s Vocal for Local in practice, not a slogan on a billboard.",
       },
     ],
   },
   {
     slug: "digital-india-bridging-the-digital-divide",
     category: "Digital India",
-    title: "Digital India: VoLo Mart's Role in Bridging the Digital Divide",
+    title: "Digital India: VoLoMart's Role in Bridging the Digital Divide",
     excerpt:
-      "How VoLo Mart is contributing to India's digital transformation by making technology accessible to local vendors and empowering them with digital tools.",
-    author: "VoLo Mart Team",
+      "How VoLoMart is contributing to India's digital transformation by making technology accessible to local vendors and empowering them with digital tools.",
+    author: "VoLoMart Team",
     date: "March 22, 2026",
     readTime: "8 min read",
     coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["digital-payments-secure-solutions", "traditional-to-digital-vendor-success-stories"],
     tldr: [
-      "Millions of small shops are still offline-first—not because they resist tech, but because tools weren’t built for them.",
-      "VoLo Mart offers simple onboarding, regional language support, and phone-first workflows.",
+      "Millions of small shops are still offline-first, not because they resist tech, but because tools weren’t built for them.",
+      "VoLoMart offers simple onboarding, regional language support, and phone-first workflows.",
       "Digital payments and order history help vendors access credit and plan inventory with confidence.",
     ],
     blocks: [
@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Digital India succeeds when a shopkeeper can go live in an afternoon. VoLo Mart strips away unnecessary dashboards: register, add products, set hours, and start receiving orders from nearby customers.",
+        text: "Digital India succeeds when a shopkeeper can go live in an afternoon. VoLoMart strips away unnecessary dashboards: register, add products, set hours, and start receiving orders from nearby customers.",
       },
       {
         type: "h2",
@@ -194,17 +194,17 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "smart-shopping-intelligent-features",
     category: "Smart Shopping",
-    title: "Smart Shopping Made Simple: VoLo Mart's Intelligent Features",
+    title: "Smart Shopping Made Simple: VoLoMart's Intelligent Features",
     excerpt:
-      "Explore how VoLo Mart's smart shopping features like recommendations, quick reorder, and inventory signals are revolutionizing local commerce.",
-    author: "VoLo Mart Team",
+      "Explore how VoLoMart's smart shopping features like recommendations, quick reorder, and inventory signals are revolutionizing local commerce.",
+    author: "VoLoMart Team",
     date: "March 18, 2026",
     readTime: "7 min read",
     coverImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["smart-inventory-management-vendors"],
     tldr: [
-      "Smart shopping isn’t about algorithms replacing shopkeepers—it’s about helping buyers decide faster.",
-      "VoLo Mart surfaces nearby sellers, popular bundles, and occasion-based picks.",
+      "Smart shopping isn’t about algorithms replacing shopkeepers. It’s about helping buyers decide faster.",
+      "VoLoMart surfaces nearby sellers, popular bundles, and occasion-based picks.",
       "Vendors benefit from clearer demand signals and fewer abandoned carts.",
     ],
     blocks: [
@@ -214,7 +214,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Search and category browsing prioritize distance and ratings from real neighbors—not anonymous warehouses thousands of kilometers away. Buyers see what’s in stock today, not what was in stock last month.",
+        text: "Search and category browsing prioritize distance and ratings from real neighbors, not anonymous warehouses thousands of kilometers away. Buyers see what’s in stock today, not what was in stock last month.",
       },
       {
         type: "h2",
@@ -231,36 +231,36 @@ export const blogPosts: BlogPost[] = [
     category: "Neighborhood Vendor",
     title: "Neighborhood Vendors: The Heart of Local Commerce",
     excerpt:
-      "Celebrating the vendors who form the backbone of communities—and how VoLo Mart supports their growth.",
-    author: "VoLo Mart Team",
+      "Celebrating the vendors who form the backbone of communities and how VoLoMart supports their growth.",
+    author: "VoLoMart Team",
     date: "March 12, 2026",
     readTime: "5 min read",
     coverImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["priya-sharma-flower-shop-hyperlocal-success", "building-trust-in-digital-commerce"],
     tldr: [
       "Kirana, florists, dairy counters, and produce sellers keep cities fed and connected.",
-      "VoLo Mart is designed around their constraints: thin margins, small teams, variable supply.",
+      "VoLoMart is designed around their constraints: thin margins, small teams, variable supply.",
       "When vendors win, neighborhoods keep character and choice.",
     ],
     blocks: [
       {
         type: "p",
-        text: "Every city block has names customers remember—the uncle who saves the last loaf, the auntie who always has ripe mangoes. VoLo Mart exists so those relationships scale beyond the sidewalk.",
+        text: "Every city block has names customers remember: the uncle who saves the last loaf, the auntie who always has ripe mangoes. VoLoMart exists so those relationships scale beyond the sidewalk.",
       },
       {
         type: "quote",
         text: "We are not trying to replace the corner store. We are trying to make sure it’s still there in ten years.",
-        attribution: "VoLo Mart product team",
+        attribution: "VoLoMart product team",
       },
     ],
   },
   {
     slug: "traditional-to-digital-vendor-success-stories",
     category: "Stories",
-    title: "From Traditional to Digital: Success Stories of VoLo Mart Vendors",
+    title: "From Traditional to Digital: Success Stories of VoLoMart Vendors",
     excerpt:
-      "Real stories of how local vendors transformed their businesses using VoLo Mart's platform.",
-    author: "VoLo Mart Team",
+      "Real stories of how local vendors transformed their businesses using VoLoMart's platform.",
+    author: "VoLoMart Team",
     date: "March 5, 2026",
     readTime: "9 min read",
     coverImage: "https://images.unsplash.com/photo-1556740772-1a741367b93e?auto=format&fit=crop&w=1200&q=80",
@@ -268,7 +268,7 @@ export const blogPosts: BlogPost[] = [
     tldr: [
       "Dozens of vendors across grocery, produce, dairy, and flowers report higher repeat rates after listing.",
       "Common thread: simple catalog setup, honest delivery windows, and clear order notes for substitutions.",
-      "Digital doesn’t mean impersonal—the best shops keep their voice on every order.",
+      "Digital doesn’t mean impersonal. The best shops keep their voice on every order.",
     ],
     blocks: [
       {
@@ -293,17 +293,17 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "digital-payments-secure-solutions",
     category: "Digital India",
-    title: "Digital Payments and Local Vendors: VoLo Mart's Secure Solutions",
+    title: "Digital Payments and Local Vendors: VoLoMart's Secure Solutions",
     excerpt:
-      "How VoLo Mart's secure digital payment system helps local vendors accept modern payment methods while maintaining trust.",
-    author: "VoLo Mart Team",
+      "How VoLoMart's secure digital payment system helps local vendors accept modern payment methods while maintaining trust.",
+    author: "VoLoMart Team",
     date: "February 28, 2026",
     readTime: "6 min read",
     coverImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["digital-india-bridging-the-digital-divide"],
     tldr: [
-      "Cash isn’t going away overnight—but mixed payment options grow average ticket size.",
-      "VoLo Mart integrates UPI and cards with clear settlement tracking for vendors.",
+      "Cash isn’t going away overnight, but mixed payment options grow average ticket size.",
+      "VoLoMart integrates UPI and cards with clear settlement tracking for vendors.",
       "Customers get instant receipts; disputes drop when expectations are set upfront.",
     ],
     blocks: [
@@ -318,31 +318,31 @@ export const blogPosts: BlogPost[] = [
     category: "Smart Shopping",
     title: "Smart Inventory Management: Helping Vendors Stay Stocked",
     excerpt:
-      "VoLo Mart's inventory tools help local vendors optimize stock levels, reduce waste, and never run out of popular items.",
-    author: "VoLo Mart Team",
+      "VoLoMart's inventory tools help local vendors optimize stock levels, reduce waste, and never run out of popular items.",
+    author: "VoLoMart Team",
     date: "February 20, 2026",
     readTime: "5 min read",
     coverImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["smart-shopping-intelligent-features"],
     tldr: [
-      "Mark items out of stock in seconds—no angry customers at the door.",
+      "Mark items out of stock in seconds so you avoid angry customers at the door.",
       "Order history highlights what to prep before rush hour.",
       "Less waste on perishables means better margins for produce and dairy sellers.",
     ],
     blocks: [
       {
         type: "p",
-        text: "Inventory on VoLo Mart is vendor-controlled. Toggle availability from your phone between customers. Over time, patterns in your orders suggest which SKUs deserve shelf space on busy days.",
+        text: "Inventory on VoLoMart is vendor-controlled. Toggle availability from your phone between customers. Over time, patterns in your orders suggest which SKUs deserve shelf space on busy days.",
       },
     ],
   },
   {
     slug: "building-trust-in-digital-commerce",
     category: "Neighborhood Vendor",
-    title: "Building Trust in Digital Commerce: VoLo Mart's Quality Assurance",
+    title: "Building Trust in Digital Commerce: VoLoMart's Quality Assurance",
     excerpt:
-      "How VoLo Mart maintains the personal touch of traditional shopping while ensuring quality and reliability online.",
-    author: "VoLo Mart Team",
+      "How VoLoMart maintains the personal touch of traditional shopping while ensuring quality and reliability online.",
+    author: "VoLoMart Team",
     date: "February 14, 2026",
     readTime: "7 min read",
     coverImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80",
@@ -350,45 +350,45 @@ export const blogPosts: BlogPost[] = [
     tldr: [
       "Ratings, order tracking, and support channels keep standards visible.",
       "Vendors with consistent quality rise in local discovery.",
-      "Buyers see product details before checkout—just like asking across the counter.",
+      "Buyers see product details before checkout, just like asking across the counter.",
     ],
     blocks: [
       {
         type: "p",
-        text: "Trust is local. VoLo Mart combines transparent reviews with human support when something goes wrong—because one bad experience shouldn’t define an entire market lane.",
+        text: "Trust is local. VoLoMart combines transparent reviews with human support when something goes wrong, because one bad experience shouldn’t define an entire market lane.",
       },
     ],
   },
   {
     slug: "community-first-neighborhood-bonds",
     category: "Vocal For Local",
-    title: "Community First: How VoLo Mart Strengthens Neighborhood Bonds",
+    title: "Community First: How VoLoMart Strengthens Neighborhood Bonds",
     excerpt:
-      "Beyond commerce, VoLo Mart creates stronger communities by connecting neighbors with local vendors.",
-    author: "VoLo Mart Team",
+      "Beyond commerce, VoLoMart creates stronger communities by connecting neighbors with local vendors.",
+    author: "VoLoMart Team",
     date: "February 8, 2026",
     readTime: "6 min read",
     coverImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["vocal-for-local-transforming-neighborhood-commerce"],
     tldr: [
-      "Commerce is a social act—familiar faces, festival orders, and shared recommendations.",
-      "VoLo Mart amplifies word of mouth with shareable shop pages and repeat rewards.",
+      "Commerce is a social act built on familiar faces, festival orders, and shared recommendations.",
+      "VoLoMart amplifies word of mouth with shareable shop pages and repeat rewards.",
       "Stronger neighborhoods mean more resilient local economies.",
     ],
     blocks: [
       {
         type: "p",
-        text: "When you order from VoLo Mart, you’re often funding the same businesses that sponsor school events and hire from the block. That loop matters—and it’s why we built for hyperlocal first.",
+        text: "When you order from VoLoMart, you’re often funding the same businesses that sponsor school events and hire from the block. That loop matters, and it’s why we built for hyperlocal first.",
       },
     ],
   },
   {
     slug: "volomart-android-app-launch",
     category: "Updates",
-    title: "The VoLo Mart app is here for buyers and vendors",
+    title: "The VoLoMart app is here for buyers and vendors",
     excerpt:
-      "Order from trusted neighborhood shops and manage your catalog from one app—now rolling out on Android with iOS coming soon.",
-    author: "VoLo Mart Team",
+      "Order from trusted neighborhood shops and manage your catalog from one app. Now rolling out on Android with iOS coming soon.",
+    author: "VoLoMart Team",
     date: "May 10, 2026",
     readTime: "4 min read",
     coverImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
@@ -405,7 +405,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "If you haven’t listed yet, start at volomart.in/register—we’ll walk you through catalog setup and your first test order.",
+        text: "If you haven’t listed yet, start at volomart.in/register. We’ll walk you through catalog setup and your first test order.",
       },
     ],
   },

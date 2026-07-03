@@ -6,7 +6,6 @@ import { FaqItem } from "@/components/FaqItem";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
-import { mainNavLinks } from "@/content/site-nav";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqSchema, softwareApplicationSchema } from "@/content/seo";
 import { resolveNetworkImageUrl } from "@/lib/image-url";
@@ -17,7 +16,7 @@ import { EarlyAccessTrigger } from "@/components/early-access/EarlyAccessTrigger
 import { BrandTagline } from "@/components/site/BrandTagline";
 
 /** Magenta accent — matches current mockups */
-/** Secondary / accent — matches `--accent` in `globals.css` (VoLo Mart warm accent). */
+/** Secondary / accent — matches `--accent` in `globals.css` (VoLoMart warm accent). */
 const MAGENTA = "#C45C26";
 
 const featureCards = [
@@ -43,7 +42,7 @@ const testimonialPeople = [
     name: "Alex Morgan",
     role: "Happy Buyer",
     quote:
-      "VoLo Mart makes daily shopping simple. I can compare nearby vendors, place quick orders, and get groceries on time.",
+      "VoLoMart makes daily shopping simple. I can compare nearby vendors, place quick orders, and get groceries on time.",
     img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=128&h=128&q=80",
   },
   {
@@ -151,8 +150,8 @@ const vendorHowItWorks = [
 
 const customerFaqItems = [
   {
-    q: "What is VoLo Mart?",
-    a: "VoLo Mart is a local marketplace app that allows you to shop for products from nearby vendors and vendor can delivered product to your doorstep.",
+    q: "What is VoLoMart?",
+    a: "VoLoMart is a local marketplace app that allows you to shop for products from nearby vendors and vendor can delivered product to your doorstep.",
   },
   {
     q: "How do I place an order?",
@@ -160,8 +159,8 @@ const customerFaqItems = [
     defaultOpen: true,
   },
   {
-    q: "What types of products can I find on VoLo Mart?",
-    a: "You can find a wide variety of products including groceries, fruits, vegetables, snacks, and more-offered by local vendors.",
+    q: "What types of products can I find on VoLoMart?",
+    a: "You can find a wide variety of products including groceries, fruits, vegetables, snacks, and more, offered by local vendors.",
   },
   {
     q: "Can I track my order?",
@@ -180,24 +179,24 @@ const customerFaqItems = [
     a: "You can cancel an order from the \"My Orders\" section, but only before the vendor has started processing it.",
   },
   {
-    q: "Is my data safe with VoLo Mart?",
+    q: "Is my data safe with VoLoMart?",
     a: "Yes. We follow industry-standard security practices to protect your personal information.",
   },
 ] as const;
 
 const vendorFaqItems = [
   {
-    q: "How can I register my shop on VoLo Mart?",
-    a: "Download the VoLo Mart App, sign up, and submit your business details for approval. Our team will verify and activate your account.",
+    q: "How can I register my shop on VoLoMart?",
+    a: "Download the VoLoMart App, sign up, and submit your business details for approval. Our team will verify and activate your account.",
   },
   {
     q: "What products can I sell?",
-    a: "You can sell any legal product that falls under your selected service such as groceries, fruits, vegetables, snacks, and more-offered by app.",
+    a: "You can sell any legal product that falls under your selected service such as groceries, fruits, vegetables, snacks, and more through the app.",
     defaultOpen: true,
   },
   {
     q: "Is there a commission fee?",
-    a: "No, VoLo Mart not charges any commission. it's take a minimal platform charge from customer",
+    a: "No, VoLoMart not charges any commission. it's take a minimal platform charge from customer",
   },
   {
     q: "How do I manage product and pricing?",
@@ -361,20 +360,6 @@ export default function Home() {
         />
 
         <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
-          <div className="mt-4 border-t border-white/10 pt-4 lg:hidden">
-            <div className="-mx-1 flex gap-4 overflow-x-auto pb-1 text-xs font-medium text-white/95 scrollbar-none">
-              {mainNavLinks.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="shrink-0 whitespace-nowrap rounded-full bg-white/10 px-3 py-1.5"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
           <div className="mx-auto mt-12 max-w-4xl text-center sm:mt-16">
             <div className="mx-auto inline-flex flex-col items-center rounded-2xl border border-white/20 bg-white/10 px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:px-8 sm:py-5">
               <BrandTagline variant="hero" />
@@ -417,10 +402,10 @@ export default function Home() {
               Launching Soon
             </p>
             <h2 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-[#1E1533] sm:text-3xl md:text-[2.15rem]">
-              Get <span className="text-[#8BC34A]">VoLo Mart</span> Early Access
+              Get <span className="text-[#8BC34A]">VoLoMart</span> Early Access
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B6278] md:text-[0.95rem]">
-              We&apos;re launching soon. Join early access to get your invite first — shop from nearby vendors with fast
+              We&apos;re launching soon. Join early access to get your invite first. Shop from nearby vendors with fast
               local delivery, or list your shop and reach customers in your area.
             </p>
 
@@ -507,12 +492,11 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:items-end lg:gap-12">
             <div>
-              <p className="flex items-center gap-2 text-sm font-medium text-[#6B6278]">
-                <span className="h-px w-6 bg-[#8BC34A]" aria-hidden />
-                Benefits of VoLo Mart
+              <p className="text-sm font-medium text-[#6B6278]">
+                Benefits of VoLoMart
               </p>
               <h2 className="mt-3 text-2xl font-extrabold leading-tight text-[#1E1533] sm:text-3xl md:text-4xl">
-                Why Customers and Vendors Choose <span className="text-[#8BC34A]">VoLo Mart</span>
+                Why Customers and Vendors Choose <span className="text-[#8BC34A]">VoLoMart</span>
               </h2>
             </div>
             <div className="flex gap-5 border-l-4 border-[#8BC34A] pl-5">
@@ -583,7 +567,9 @@ export default function Home() {
       {/* How It Works */}
       <section id="how-it-works" className="bg-[#F3F2F6] py-14 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center lg:px-6">
-          <p className="text-sm font-medium text-[#6B6278]">— How It Works —</p>
+          <p className="text-sm font-medium text-[#6B6278]">
+            How It Works
+          </p>
           <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#1E1533] sm:text-3xl md:text-[2.25rem]">
             The <span className="text-[#8BC34A]">Seamless Experience</span> of Our App
           </h2>
@@ -655,7 +641,9 @@ export default function Home() {
       {/* App Demo */}
       <section className="bg-white py-14 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center lg:px-6">
-          <p className="text-sm font-medium text-[#6B6278]">— App Demo —</p>
+          <p className="text-sm font-medium text-[#6B6278]">
+            App Demo
+          </p>
           <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#1E1533] sm:text-3xl md:text-[2.25rem]">
             View <span className="text-[#8BC34A]">Our App Demo</span>
           </h2>
@@ -695,7 +683,9 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-medium text-[#6B6278]">— Local Services —</p>
+              <p className="text-sm font-medium text-[#6B6278]">
+                Local Services
+              </p>
               <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-[#1E1533] sm:text-3xl md:text-[2.25rem]">
                 Explore Our <span className="text-[#8BC34A]">Service Categories</span>
               </h2>
@@ -763,16 +753,15 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl px-4 lg:px-6">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
             <div className="max-w-xl shrink-0">
-              <p className="flex items-center gap-2 text-sm font-semibold tracking-wide text-[#8BC34A]">
-                <span className="h-px w-6 bg-[#8BC34A]" aria-hidden />
+              <p className="text-sm font-semibold tracking-wide text-[#8BC34A]">
                 Best Features
               </p>
               <h2 className="mt-3 text-3xl font-extrabold leading-[1.15] tracking-tight md:text-[2.35rem]">
-                Features of <span className="text-[#8BC34A]">VoLo Mart</span> Platform
+                Features of <span className="text-[#8BC34A]">VoLoMart</span> Platform
               </h2>
             </div>
             <p className="max-w-lg border-l-4 border-[#8BC34A] pl-5 text-sm leading-relaxed text-[#C4C0CD] lg:pt-1 lg:text-[0.9375rem]">
-              VoLo Mart is designed for real neighborhood commerce with location-based discovery, stock visibility,
+              VoLoMart is designed for real neighborhood commerce with location-based discovery, stock visibility,
               and faster local fulfilment for daily needs.
             </p>
           </div>
@@ -797,7 +786,9 @@ export default function Home() {
       {/* Testimonials */}
       <section id="testimonials" className="bg-white py-14 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center lg:px-6">
-          <p className="text-sm font-medium text-[#6B6278]">— Testimonials —</p>
+          <p className="text-sm font-medium text-[#6B6278]">
+            Testimonials
+          </p>
           <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#1E1533] sm:text-3xl md:text-[2.25rem]">
             Our Customer <span className="text-[#8BC34A]">Testimonials</span>
           </h2>
@@ -810,7 +801,9 @@ export default function Home() {
       {/* FAQ */}
       <section className="bg-[#F3F2F6] pb-14 pt-2 lg:pb-20 lg:pt-4">
         <div className="mx-auto max-w-3xl px-4 lg:px-6">
-          <p className="text-center text-sm font-medium text-[#6B6278]">— FAQ —</p>
+          <p className="text-center text-sm font-medium text-[#6B6278]">
+            FAQ
+          </p>
           <h2 className="mt-3 text-center text-3xl font-extrabold tracking-tight text-[#1E1533] md:text-4xl">
             Questions? Look here.
           </h2>

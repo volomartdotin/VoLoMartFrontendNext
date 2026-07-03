@@ -1,6 +1,6 @@
 export const site = {
-  name: "VoLo Mart",
-  taglineEn: "Your neighborhood store, online—in minutes.",
+  name: "VoLoMart",
+  taglineEn: "Your neighborhood store, online in minutes.",
   taglineHi: "हर लोकल वेंडर की डिजिटल दुकान",
   taglineHiRoman: "Har Local Vendor Ki Digital Dukaan",
   supportEmail: "support@volomart.in",
@@ -17,10 +17,10 @@ export const nav = [
 
 export const hero = {
   badge: "Now onboarding local vendors",
-  title: "Turn footfall into orders—without a tech team.",
+  title: "Turn footfall into orders without a tech team.",
   subtitle:
-    "VoLo Mart helps kirana, produce sellers, dairy, bakery, and specialty shops get discovered by nearby customers, manage orders, and fulfil fast deliveries—all from one simple app.",
-  primaryCta: "Register your shop — free",
+    "VoLoMart helps kirana, produce sellers, dairy, bakery, and specialty shops get discovered by nearby customers, manage orders, and fulfil fast deliveries, all from one simple app.",
+  primaryCta: "Register your shop for free",
   primaryHref: "/register",
   secondaryCta: "Talk to us",
   secondaryHref: "/contact",
@@ -32,7 +32,7 @@ export const hero = {
 } as const;
 
 export const painSolution = {
-  title: "Built for real shops—not distant warehouses",
+  title: "Built for real shops, not distant warehouses",
   pains: [
     {
       title: "Big apps dilute your brand",
@@ -54,7 +54,7 @@ export const painSolution = {
     },
     {
       title: "Structured orders in one place",
-      body: "See items, quantities, and notes in one place—manage every order without scattered messages.",
+      body: "See items, quantities, and notes in one place. Manage every order without scattered messages.",
     },
     {
       title: "Operational rhythm for local speed",
@@ -74,7 +74,7 @@ export const benefits = [
   },
   {
     title: "Earn repeat buyers",
-    body: "Ratings and familiar faces build habit—local commerce wins on trust and consistency.",
+    body: "Ratings and familiar faces build habit. Local commerce wins on trust and consistency.",
   },
   {
     title: "Grow with insights",
@@ -91,7 +91,7 @@ export const howItWorks = [
   {
     step: "2",
     title: "Set up your catalog",
-    body: "Add bestsellers first—photos optional but recommended for produce and specialty items.",
+    body: "Add bestsellers first. Photos are optional but recommended for produce and specialty items.",
   },
   {
     step: "3",
@@ -137,7 +137,7 @@ export const faq = [
   },
   {
     q: "Can I pause orders when I’m busy?",
-    a: "Yes—local shops need control. You should be able to manage availability and order acceptance from the vendor app.",
+    a: "Yes. Local shops need control. You should be able to manage availability and order acceptance from the vendor app.",
   },
   {
     q: "How do payouts work?",
@@ -152,7 +152,7 @@ export const registerCopy = {
 } as const;
 
 export const contactCopy = {
-  title: "Talk to VoLo Mart",
+  title: "Talk to VoLoMart",
   subtitle:
-    "Questions about onboarding, categories, or your city? Send a message—we read every note.",
+    "Questions about onboarding, categories, or your city? Send a message. We read every note.",
 } as const;

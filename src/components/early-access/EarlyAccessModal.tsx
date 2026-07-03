@@ -137,7 +137,7 @@ export function EarlyAccessModal({ open, onClose, trigger }: Props) {
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-[#8BC34A]">Launching Soon · Early Access</p>
             <h2 id="early-access-title" className="mt-1 text-xl font-bold text-[#1E1533]">
-              Get the VoLo Mart app first
+              Get the VoLoMart app first
             </h2>
           </div>
           <button
@@ -161,7 +161,7 @@ export function EarlyAccessModal({ open, onClose, trigger }: Props) {
             </div>
             <p className="mt-4 text-lg font-semibold text-[#1E1533]">You&apos;re on the list!</p>
             <p className="mt-2 text-sm leading-relaxed text-[#6B6278]">
-              We&apos;ll email and text you as soon as VoLo Mart is live. Thank you for joining early access.
+              We&apos;ll email and text you as soon as VoLoMart is live. Thank you for joining early access.
             </p>
             <button
               type="button"
@@ -175,8 +175,8 @@ export function EarlyAccessModal({ open, onClose, trigger }: Props) {
           <div className="px-6 py-5">
             <div className="rounded-xl bg-[#F3F2F6] p-4 text-sm leading-relaxed text-[#3D3550]">
               <p>
-                We&apos;re launching soon — customers can shop from nearby vendors, and local shops can list on VoLo
-                Mart to reach buyers in their area.
+                We&apos;re launching soon. Customers can shop from nearby vendors, and local shops can list on VoLoMart
+                to reach buyers in their area.
               </p>
               <p className="mt-2">
                 Share your email, phone, location, and whether you&apos;re a customer or vendor below.

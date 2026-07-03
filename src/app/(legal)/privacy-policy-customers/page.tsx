@@ -3,9 +3,9 @@ import { PrivacyPolicyArticle } from "@/components/legal/PrivacyPolicyArticle";
 import { customerPrivacyPolicy } from "@/content/privacy-policies";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Customers",
+  title: "Privacy Policy for Customers",
   description:
-    "Comprehensive privacy policy for VoLo Mart customers, covering data collection, usage, and your rights.",
+    "Comprehensive privacy policy for VoLoMart customers, covering data collection, usage, and your rights.",
   openGraph: {
     title: "Privacy Policy for Customers",
     description: customerPrivacyPolicy.subtitle,

@@ -4,7 +4,7 @@ import { site } from "@/content/vendor";
 
 export const metadata: Metadata = {
   title: "Terms of use",
-  description: "Terms for using the VoLo Mart marketing website and submitting vendor inquiries.",
+  description: "Terms for using the VoLoMart marketing website and submitting vendor inquiries.",
   alternates: { canonical: "/terms" },
 };
 

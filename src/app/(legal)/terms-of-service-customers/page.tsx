@@ -3,8 +3,8 @@ import { TermsArticle } from "@/components/legal/TermsArticle";
 import { customerTerms } from "@/content/terms-of-service";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Customers",
-  description: "Customer terms of service for using VoLo Mart.",
+  title: "Terms of Service for Customers",
+  description: "Customer terms of service for using VoLoMart.",
   openGraph: {
     title: "Terms of Service for Customers",
     description: customerTerms.subtitle,

@@ -3,8 +3,8 @@ import { TermsArticle } from "@/components/legal/TermsArticle";
 import { vendorTerms } from "@/content/terms-of-service";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Vendors",
-  description: "Vendor agreement and partnership terms for VoLo Mart.",
+  title: "Terms of Service for Vendors",
+  description: "Vendor agreement and partnership terms for VoLoMart.",
   openGraph: {
     title: "Vendor Agreement",
     description: vendorTerms.subtitle,

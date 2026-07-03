@@ -39,7 +39,7 @@ export function BlogArticleBody({ blocks }: { blocks: BlogBlock[] }) {
               >
                 <p>&ldquo;{block.text}&rdquo;</p>
                 {block.attribution ? (
-                  <footer className="mt-3 text-sm font-medium not-italic text-muted">— {block.attribution}</footer>
+                  <footer className="mt-3 text-sm font-medium not-italic text-muted">{block.attribution}</footer>
                 ) : null}
               </blockquote>
             );

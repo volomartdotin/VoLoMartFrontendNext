@@ -173,7 +173,7 @@ export function PricingGrid() {
 
               <div className="mt-6 border-b border-[#F3F2F6] pb-6">
                 <p className="text-3xl font-bold tracking-tight text-[#21153a]">
-                  {price?.displayPrice ?? "—"}
+                  {price?.displayPrice ?? "N/A"}
                 </p>
                 <p className="mt-1 text-sm text-[#5c6b63]">{yearly ? "billed yearly" : "billed monthly"}</p>
                 {yearly && savings ? (

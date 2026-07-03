@@ -12,7 +12,7 @@ export function BrandTagline({ variant = "hero", className = "" }: Props) {
     <div
       className={`tagline-enter ${className}`}
       role="doc-subtitle"
-      aria-label={`${site.taglineHiRoman} — ${site.taglineHi}`}
+      aria-label={`${site.taglineHiRoman}, ${site.taglineHi}`}
     >
       <p
         className={`font-devanagari text-xl font-semibold leading-snug sm:text-2xl md:text-[1.75rem] ${
