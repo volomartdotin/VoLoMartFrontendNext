@@ -20,7 +20,7 @@ export function BrandTagline({ variant = "hero", className = "" }: Props) {
         }`}
       >
         हर लोकल वेंडर की{" "}
-        <span className="tagline-highlight">डिजिटल दुकान</span>
+        <span className={`tagline-highlight${isHero ? " tagline-highlight-hero" : ""}`}>डिजिटल दुकान</span>
       </p>
       <p
         className={`tagline-sub mt-2 text-xs font-medium uppercase tracking-[0.2em] sm:text-sm ${

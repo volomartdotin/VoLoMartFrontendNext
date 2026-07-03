@@ -88,14 +88,39 @@ body {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
+/* Hero glass card: keep the orange shimmer readable on green + frosted background */
+.tagline-highlight-hero {
+  color: #fff;
+  background: linear-gradient(
+    110deg,
+    #a84312 0%,
+    #c45c26 20%,
+    #f0b429 45%,
+    #fff8eb 50%,
+    #f0b429 55%,
+    #c45c26 80%,
+    #a84312 100%
+  );
+  background-size: 220% auto;
+  box-shadow: 0 2px 12px rgba(164, 67, 18, 0.45);
+  animation: tagline-shimmer 2.8s linear infinite, tagline-glow 2.2s ease-in-out infinite;
+}
+
 .tagline-sub {
   animation: tagline-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .tagline-enter,
-  .tagline-sub,
-  .tagline-highlight {
+  .tagline-sub {
     animation: none;
+  }
+
+  .tagline-highlight,
+  .tagline-highlight-hero {
+    animation: none;
+    background: #c45c26;
+    background-size: auto;
+    box-shadow: none;
   }
 }
