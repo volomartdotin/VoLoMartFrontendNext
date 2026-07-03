@@ -13,6 +13,8 @@ import { resolveNetworkImageUrl } from "@/lib/image-url";
 import { fetchServiceCategories, type ServiceCategory } from "@/lib/services-api";
 import { AnalyticsEvents } from "@/lib/analytics/events";
 import { trackClick } from "@/lib/analytics/track";
+import { EarlyAccessTrigger } from "@/components/early-access/EarlyAccessTrigger";
+import { BrandTagline } from "@/components/site/BrandTagline";
 
 /** Magenta accent — matches current mockups */
 /** Secondary / accent — matches `--accent` in `globals.css` (VoLo Mart warm accent). */
@@ -48,7 +50,7 @@ const testimonialPeople = [
     name: "Jordan Kim",
     role: "Verified Customer",
     quote:
-      "The vendor chat is very useful. I confirm product freshness before ordering, and delivery tracking is clear and reliable.",
+      "I can compare nearby vendors, check product details before ordering, and delivery tracking is clear and reliable.",
     img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=128&h=128&q=80",
   },
   {
@@ -62,7 +64,7 @@ const testimonialPeople = [
     name: "Taylor Brooks",
     role: "Repeat Customer",
     quote:
-      "I now order fruits, vegetables, and dairy from familiar vendors. Service feels personal, and issues are solved quickly on chat.",
+      "I now order fruits, vegetables, and dairy from familiar vendors. Service feels personal, and any issues are resolved quickly.",
     img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=128&h=128&q=80",
   },
   {
@@ -108,9 +110,9 @@ const customerHowItWorks = [
     icon: "discover",
   },
   {
-    title: "Browse & Chat",
-    body: "Explore products, check freshness, and chat directly with vendors for custom orders or special requests.",
-    icon: "chat",
+    title: "Browse Products",
+    body: "Explore products, check freshness, and pick what you need from trusted local vendors.",
+    icon: "catalog",
   },
   {
     title: "Place Your Order",
@@ -136,8 +138,8 @@ const vendorHowItWorks = [
     icon: "catalog",
   },
   {
-    title: "Accept Orders & Chat",
-    body: "Receive customer orders in-app, confirm availability, and communicate instantly for smooth fulfilment.",
+    title: "Accept Orders",
+    body: "Receive customer orders in-app, confirm availability, and manage fulfilment smoothly.",
     icon: "orders",
   },
   {
@@ -244,20 +246,13 @@ function FeaturePhoneFrame({ src }: { src: string }) {
 function HowStepIcon({
   icon,
 }: {
-  icon: "discover" | "chat" | "order" | "delivery" | "register" | "catalog" | "orders" | "growth";
+  icon: "discover" | "order" | "delivery" | "register" | "catalog" | "orders" | "growth";
 }) {
   if (icon === "discover") {
     return (
       <svg className="h-5 w-5 text-[#8BC34A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
         <circle cx="11" cy="11" r="7" />
         <path strokeLinecap="round" d="m21 21-4.35-4.35" />
-      </svg>
-    );
-  }
-  if (icon === "chat") {
-    return (
-      <svg className="h-5 w-5 text-[#8BC34A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a8 8 0 0 1-8 8H7l-4 3v-7a8 8 0 1 1 18-4z" />
       </svg>
     );
   }
@@ -381,8 +376,10 @@ export default function Home() {
           </div>
 
           <div className="mx-auto mt-12 max-w-4xl text-center sm:mt-16">
-            <p className="text-sm text-white/90 md:text-base">Ready to shop from nearby trusted vendors?</p>
-            <h1 className="mt-4 px-2 text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[3.35rem]">
+            <div className="mx-auto inline-flex flex-col items-center rounded-2xl border border-white/20 bg-white/10 px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:px-8 sm:py-5">
+              <BrandTagline variant="hero" />
+            </div>
+            <h1 className="mt-8 px-2 text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[3.35rem]">
               Your Ultimate Local{" "}
               <span
                 className="inline-block align-middle text-[#C45C26] [font-family:var(--font-delivery-script),cursive] text-[2.75rem] font-normal sm:text-6xl md:text-7xl lg:text-[4.25rem]"
@@ -416,34 +413,36 @@ export default function Home() {
       <section id="download-app" className="bg-[#F3F2F6] pb-14 pt-14 lg:pb-16 lg:pt-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:px-6">
           <div>
-            <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-[#1E1533] sm:text-3xl md:text-[2.15rem]">
-              Download <span className="text-[#8BC34A]">VoLo Mart</span> App Today!
+            <p className="inline-flex items-center rounded-full bg-[#8BC34A]/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#5A7F30]">
+              Launching Soon
+            </p>
+            <h2 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-[#1E1533] sm:text-3xl md:text-[2.15rem]">
+              Get <span className="text-[#8BC34A]">VoLo Mart</span> Early Access
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B6278] md:text-[0.95rem]">
-              Shop daily essentials from nearby vendors, chat directly for custom requests, and get faster local
-              delivery with better trust and freshness.
+              We&apos;re launching soon. Join early access to get your invite first — shop from nearby vendors with fast
+              local delivery, or list your shop and reach customers in your area.
             </p>
 
-            <div className="mt-10 flex max-w-2xl flex-col divide-y divide-[#D9D3E4] border-y border-[#D9D3E4] py-6 sm:flex-row sm:divide-x sm:divide-y-0">
-              {[
-                { n: "0.5K+", label: "Active Local Vendors" },
-                { n: "8", label: "Service Categories" },
-                { n: "~20 min", label: "Average Delivery Target" },
-              ].map((stat) => (
-                <div key={stat.label} className="flex flex-1 flex-col py-4 first:pt-0 last:pb-0 sm:px-6 sm:py-0 sm:first:pl-0 sm:last:pr-0">
-                  <p className="text-xl font-extrabold text-[#8BC34A] sm:text-2xl">{stat.n}</p>
-                  <p className="mt-1 text-[11px] font-medium leading-snug text-[#7A7189] sm:text-xs">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+            <EarlyAccessTrigger
+              trigger="homepage-section"
+              onClick={() =>
+                trackClick(AnalyticsEvents.homepageCta, "/", {
+                  label: "Get Early Access",
+                })
+              }
+              className="mt-8 inline-flex rounded-full bg-[#8BC34A] px-8 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#74A73D]"
+            >
+              Get Early Access
+            </EarlyAccessTrigger>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="relative flex min-h-[280px] flex-col rounded-2xl bg-[#FAFAFB] p-5 shadow-sm ring-1 ring-black/[0.04]">
               <p className="text-sm font-bold text-[#1E1533]">For iOS</p>
               <p className="mt-1 text-xs text-[#7A7189]">iOS 15.6+</p>
-              <a
-                href="#"
+              <EarlyAccessTrigger
+                trigger="homepage-ios"
                 onClick={() =>
                   trackClick(AnalyticsEvents.homepageCta, "/", {
                     platform: "ios",
@@ -453,7 +452,7 @@ export default function Home() {
                 className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#8BC34A] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#084236]"
               >
                 Download App
-              </a>
+              </EarlyAccessTrigger>
               <div className="mt-auto flex items-end justify-between gap-3 pt-8">
                 <img
                   src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://apps.apple.com"
@@ -471,8 +470,8 @@ export default function Home() {
             <div className="relative flex min-h-[280px] flex-col rounded-2xl bg-[#FAFAFB] p-5 shadow-sm ring-1 ring-black/[0.04]">
               <p className="text-sm font-bold text-[#1E1533]">For Android</p>
               <p className="mt-1 text-xs text-[#7A7189]">Android 8.0+</p>
-              <a
-                href="#"
+              <EarlyAccessTrigger
+                trigger="homepage-android"
                 onClick={() =>
                   trackClick(AnalyticsEvents.homepageCta, "/", {
                     platform: "android",
@@ -482,7 +481,7 @@ export default function Home() {
                 className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#8BC34A] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#084236]"
               >
                 Download App
-              </a>
+              </EarlyAccessTrigger>
               <div className="mt-auto flex items-end justify-between gap-3 pt-8">
                 <img
                   src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://play.google.com/store"
@@ -536,11 +535,13 @@ export default function Home() {
                 ),
               },
               {
-                title: "Direct Communication",
-                body: "Chat directly with vendors.",
+                title: "Order Tracking",
+                body: "Follow your order from placement to delivery.",
                 icon: (
                   <svg className="h-6 w-6 text-[#8BC34A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a8 8 0 0 1-8 8H7l-4 3v-7a8 8 0 1 1 18-4z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+                    <rect x="9" y="3" width="6" height="4" rx="1" />
+                    <path strokeLinecap="round" d="M9 12h6M9 16h4" />
                   </svg>
                 ),
               },
@@ -771,8 +772,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="max-w-lg border-l-4 border-[#8BC34A] pl-5 text-sm leading-relaxed text-[#C4C0CD] lg:pt-1 lg:text-[0.9375rem]">
-              VoLo Mart is designed for real neighborhood commerce with location-based discovery, direct vendor chat,
-              stock visibility, and faster local fulfilment for daily needs.
+              VoLo Mart is designed for real neighborhood commerce with location-based discovery, stock visibility,
+              and faster local fulfilment for daily needs.
             </p>
           </div>
 

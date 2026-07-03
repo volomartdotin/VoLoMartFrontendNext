@@ -5,6 +5,9 @@ export const AnalyticsEvents = {
   pricingPlanCta: 'pricing_plan_cta',
   registerSubmit: 'register_submit',
   contactSubmit: 'contact_submit',
+  earlyAccessOpen: 'early_access_open',
+  earlyAccessSubmit: 'early_access_submit',
+  subscribeSubmit: 'subscribe_submit',
   blogPostClick: 'blog_post_click',
 } as const;
 

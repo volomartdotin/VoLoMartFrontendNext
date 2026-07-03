@@ -10,8 +10,7 @@ export function Footer() {
           <div className="max-w-sm">
             <Logo />
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Hyperlocal marketplace helping neighborhood vendors grow with structured orders, chat, and local
-              discovery.
+              Hyperlocal marketplace helping neighborhood vendors grow with structured orders and local discovery.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">

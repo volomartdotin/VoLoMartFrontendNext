@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Like many neighborhood vendors, Priya relied on word of mouth, a handwritten ledger, and late-night WhatsApp messages. Orders were real, but scattered. Missed chats meant missed sales. She wanted growth without turning her shop into a full-time logistics company.",
+        text: "Like many neighborhood vendors, Priya relied on word of mouth, a handwritten ledger, and late-night WhatsApp messages. Orders were real, but scattered. Missed messages meant missed sales. She wanted growth without turning her shop into a full-time logistics company.",
       },
       {
         type: "img",
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Location-based discovery put her in front of nearby buyers searching for “flowers” and “garlands.” In-app chat let customers confirm colors and timing without endless phone tag. Structured orders replaced screenshot chaos—and payouts landed on a predictable schedule.",
+        text: "Location-based discovery put her in front of nearby buyers searching for “flowers” and “garlands.” Clear order details let customers confirm colors and timing without endless phone tag. Structured orders replaced screenshot chaos—and payouts landed on a predictable schedule.",
       },
       {
         type: "h3",
@@ -135,14 +135,14 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Customers choose neighborhood shops for freshness, flexibility, and relationships. VoLo Mart doesn’t ask vendors to become warehouses—it gives them digital shelf space, chat, and delivery tools that respect how they already operate.",
+        text: "Customers choose neighborhood shops for freshness, flexibility, and relationships. VoLo Mart doesn’t ask vendors to become warehouses—it gives them digital shelf space, order tools, and delivery support that respect how they already operate.",
       },
       {
         type: "ul",
         items: [
           "List your real catalog with photos and honest stock.",
           "Serve buyers within roughly 3 km who value proximity.",
-          "Keep the personal touch—confirm substitutions on chat.",
+          "Keep the personal touch—note substitutions clearly on each order.",
           "Grow repeat business without expensive ad spends.",
         ],
       },
@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
     relatedSlugs: ["priya-sharma-flower-shop-hyperlocal-success", "digital-india-bridging-the-digital-divide"],
     tldr: [
       "Dozens of vendors across grocery, produce, dairy, and flowers report higher repeat rates after listing.",
-      "Common thread: simple catalog setup, honest delivery windows, and chat for substitutions.",
+      "Common thread: simple catalog setup, honest delivery windows, and clear order notes for substitutions.",
       "Digital doesn’t mean impersonal—the best shops keep their voice on every order.",
     ],
     blocks: [
@@ -280,7 +280,7 @@ export const blogPosts: BlogPost[] = [
         items: [
           "Clear photos and weights reduce returns.",
           "Consistent morning delivery builds weekday habit.",
-          "Owners who reply on chat within minutes earn loyalty.",
+          "Owners who confirm orders quickly earn loyalty.",
           "Festival menus published early capture pre-orders.",
         ],
       },
@@ -350,7 +350,7 @@ export const blogPosts: BlogPost[] = [
     tldr: [
       "Ratings, order tracking, and support channels keep standards visible.",
       "Vendors with consistent quality rise in local discovery.",
-      "Buyers can chat before checkout—just like asking across the counter.",
+      "Buyers see product details before checkout—just like asking across the counter.",
     ],
     blocks: [
       {
@@ -394,7 +394,7 @@ export const blogPosts: BlogPost[] = [
     coverImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
     relatedSlugs: ["smart-shopping-intelligent-features"],
     tldr: [
-      "Browse nearby vendors, chat, and track deliveries in one place.",
+      "Browse nearby vendors and track deliveries in one place.",
       "Vendors get order alerts, catalog edits, and payout visibility on mobile.",
       "Register your shop free on our starter onboarding program.",
     ],

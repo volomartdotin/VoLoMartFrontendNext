@@ -6,6 +6,7 @@ import { useState } from "react";
 import { AnalyticsEvents } from "@/lib/analytics/events";
 import { trackClick } from "@/lib/analytics/track";
 import { mainNavLinks } from "@/content/site-nav";
+import { EarlyAccessTrigger } from "@/components/early-access/EarlyAccessTrigger";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -38,13 +39,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-3">
-          <Link
-            href="/#download-app"
-            onClick={() => handleNavClick("Get the App", "/#download-app")}
+          <EarlyAccessTrigger
+            trigger="header-desktop"
+            onClick={() => handleNavClick("Get the App", "early-access")}
             className="hidden rounded-full bg-[#8BC34A] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#74A73D] sm:inline-flex"
           >
             Get the App
-          </Link>
+          </EarlyAccessTrigger>
 
           <button
             type="button"
@@ -83,13 +84,16 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/#download-app"
-              className="mt-3 rounded-full bg-[#8BC34A] py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-[#74A73D]"
-              onClick={() => setOpen(false)}
+            <EarlyAccessTrigger
+              trigger="header-mobile"
+              onClick={() => {
+                handleNavClick("Get the App", "early-access");
+                setOpen(false);
+              }}
+              className="mt-3 w-full rounded-full bg-[#8BC34A] py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-[#74A73D]"
             >
               Get the App
-            </Link>
+            </EarlyAccessTrigger>
           </nav>
         </div>
       )}

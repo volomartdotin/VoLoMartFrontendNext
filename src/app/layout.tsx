@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_Devanagari, Great_Vibes } from "next/font/google";
 import "./globals.css";
+import { EarlyAccessProvider } from "@/components/early-access/EarlyAccessProvider";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema, websiteSchema } from "@/content/seo";
@@ -26,7 +27,7 @@ const notoDevanagari = Noto_Sans_Devanagari({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.volomart.in";
 
 const description =
-  "VoLo Mart is India's hyperlocal marketplace connecting customers with trusted nearby vendors for grocery, vegetables, fruit, dairy, namkeen, and flowers—with direct chat and fast local delivery.";
+  "VoLo Mart is India's hyperlocal marketplace connecting customers with trusted nearby vendors for grocery, vegetables, fruit, dairy, namkeen, and flowers—with fast local delivery.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -100,7 +101,7 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <ScrollToTop />
-        {children}
+        <EarlyAccessProvider>{children}</EarlyAccessProvider>
       </body>
     </html>
   );

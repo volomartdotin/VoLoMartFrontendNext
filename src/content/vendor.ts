@@ -2,6 +2,7 @@ export const site = {
   name: "VoLo Mart",
   taglineEn: "Your neighborhood store, online—in minutes.",
   taglineHi: "हर लोकल वेंडर की डिजिटल दुकान",
+  taglineHiRoman: "Har Local Vendor Ki Digital Dukaan",
   supportEmail: "support@volomart.in",
   url: "https://www.volomart.in",
 } as const;
@@ -18,7 +19,7 @@ export const hero = {
   badge: "Now onboarding local vendors",
   title: "Turn footfall into orders—without a tech team.",
   subtitle:
-    "VoLo Mart helps kirana, produce sellers, dairy, bakery, and specialty shops get discovered by nearby customers, chat on orders, and fulfil fast deliveries—all from one simple app.",
+    "VoLo Mart helps kirana, produce sellers, dairy, bakery, and specialty shops get discovered by nearby customers, manage orders, and fulfil fast deliveries—all from one simple app.",
   primaryCta: "Register your shop — free",
   primaryHref: "/register",
   secondaryCta: "Talk to us",
@@ -26,7 +27,7 @@ export const hero = {
   bullets: [
     "Free to list your shop (no setup fees on our starter program)",
     "Reach buyers within ~3 km who already want local",
-    "Live catalog, chat, and order alerts built for busy shopkeepers",
+    "Live catalog and order alerts built for busy shopkeepers",
   ],
 } as const;
 
@@ -52,8 +53,8 @@ export const painSolution = {
       body: "You stay the merchant they know. We help them find you faster and order with clarity.",
     },
     {
-      title: "Structured orders + direct chat",
-      body: "See items, quantities, and notes in one place—reply in-app when something needs a quick tweak.",
+      title: "Structured orders in one place",
+      body: "See items, quantities, and notes in one place—manage every order without scattered messages.",
     },
     {
       title: "Operational rhythm for local speed",
@@ -95,7 +96,7 @@ export const howItWorks = [
   {
     step: "3",
     title: "Go live to nearby buyers",
-    body: "Start receiving orders and chats. You control what you accept and when you’re open.",
+    body: "Start receiving orders in the app. You control what you accept and when you’re open.",
   },
 ] as const;
 

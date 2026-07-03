@@ -35,3 +35,67 @@ body {
 .font-devanagari {
   font-family: var(--font-noto-devanagari), ui-sans-serif, system-ui, sans-serif;
 }
+
+@keyframes tagline-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tagline-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(196, 92, 38, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 24px 4px rgba(196, 92, 38, 0.45);
+  }
+}
+
+@keyframes tagline-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.tagline-enter {
+  animation: tagline-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.tagline-highlight {
+  display: inline-block;
+  padding: 0.1em 0.35em;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: linear-gradient(
+    110deg,
+    #c45c26 0%,
+    #e8a04c 25%,
+    #fff4e6 50%,
+    #e8a04c 75%,
+    #c45c26 100%
+  );
+  background-size: 200% auto;
+  animation: tagline-shimmer 3.5s linear infinite, tagline-glow 2.5s ease-in-out infinite;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.tagline-sub {
+  animation: tagline-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tagline-enter,
+  .tagline-sub,
+  .tagline-highlight {
+    animation: none;
+  }
+}

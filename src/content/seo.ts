@@ -20,7 +20,7 @@ export const organizationSchema = {
   logo: logoUrl,
   email: site.supportEmail,
   description:
-    "VoLo Mart is a hyperlocal marketplace that helps neighborhood vendors get discovered by nearby customers, chat on orders, and fulfil fast local deliveries.",
+    "VoLo Mart is a hyperlocal marketplace that helps neighborhood vendors get discovered by nearby customers, manage orders, and fulfil fast local deliveries.",
   sameAs: [
     "https://facebook.com/volomart",
     "https://instagram.com/volomart.in",
@@ -50,7 +50,7 @@ export const softwareApplicationSchema = {
   url: siteUrl,
   image: absoluteUrl("/volo-mart-logo.png"),
   description:
-    "Shop daily essentials from nearby vendors, chat directly for custom requests, and get faster local delivery with VoLo Mart—India's hyperlocal marketplace for grocery, vegetables, fruit, dairy, namkeen, and flowers.",
+    "Shop daily essentials from nearby vendors and get faster local delivery with VoLo Mart—India's hyperlocal marketplace for grocery, vegetables, fruit, dairy, namkeen, and flowers.",
   offers: {
     "@type": "Offer",
     price: "0",

@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { AnalyticsEvents } from "@/lib/analytics/events";
 import { trackClick } from "@/lib/analytics/track";
 import { legalNavLinks, mainNavLinks } from "@/content/site-nav";
+import { EarlyAccessTrigger } from "@/components/early-access/EarlyAccessTrigger";
+import { SubscribeForm } from "@/components/forms/SubscribeForm";
 
 export function SiteFooter() {
   const pathname = usePathname();
@@ -27,27 +29,26 @@ export function SiteFooter() {
             backgroundSize: "42px 42px, 42px 42px, 100% 100%",
           }}
         >
-          <p className="text-sm font-medium text-white/90">Your Ultimate Solution for Hyperlocal Shopping</p>
+          <p className="text-sm font-medium text-white/90">We&apos;re launching soon</p>
           <h2 className="mt-2 text-[2.1rem] font-extrabold leading-none tracking-tight md:text-[2.55rem]">
-            Download the App Now!
+            Join Early Access
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-xs leading-relaxed text-white/80 md:text-sm">
-            Join VoLo Mart to discover nearby vendors, order essentials quickly, and support your local economy every
-            day.
+            Sign up as a customer or vendor and be the first to know when VoLo Mart goes live.
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
-            <a
-              href="#"
-              className="inline-flex rounded-md border border-white/20 bg-black px-3 py-1.5 text-[10px] font-medium uppercase tracking-wide text-white/80"
+            <EarlyAccessTrigger
+              trigger="footer-android"
+              className="inline-flex rounded-md border border-white/20 bg-black px-3 py-1.5 text-[10px] font-medium uppercase tracking-wide text-white/80 transition hover:bg-white/10"
             >
               Get it on Google Play
-            </a>
-            <a
-              href="#"
-              className="inline-flex rounded-md border border-white/20 bg-black px-3 py-1.5 text-[10px] font-medium uppercase tracking-wide text-white/80"
+            </EarlyAccessTrigger>
+            <EarlyAccessTrigger
+              trigger="footer-ios"
+              className="inline-flex rounded-md border border-white/20 bg-black px-3 py-1.5 text-[10px] font-medium uppercase tracking-wide text-white/80 transition hover:bg-white/10"
             >
               Download on the App Store
-            </a>
+            </EarlyAccessTrigger>
           </div>
         </div>
       </div>
@@ -159,27 +160,7 @@ export function SiteFooter() {
           <div className="sm:col-span-2 lg:col-span-1">
             <p className="text-sm font-bold text-white">Subscribe</p>
             <p className="mt-3 text-sm text-[#b8b2c4]">Get latest updates and offers from VoLo Mart.</p>
-            <form className="mt-4 flex" action="#" method="post">
-              <label htmlFor="footer-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="footer-email"
-                name="email"
-                type="email"
-                placeholder="Enter your email"
-                className="min-h-10 min-w-0 flex-1 rounded-l-md border border-white/10 bg-[#30313a] px-3 text-xs text-white placeholder:text-[#8b8498] outline-none ring-[#8BC34A]/40 focus:ring-2"
-              />
-              <button
-                type="submit"
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-r-md bg-[#8BC34A] text-white transition hover:bg-[#084236]"
-                aria-label="Subscribe"
-              >
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </button>
-            </form>
+            <SubscribeForm />
           </div>
         </div>
 

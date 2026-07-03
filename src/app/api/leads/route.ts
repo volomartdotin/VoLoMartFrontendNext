@@ -19,8 +19,22 @@ type ContactPayload = {
   message: string;
 };
 
+type EarlyAccessPayload = {
+  type: "early-access";
+  email: string;
+  phone: string;
+  location: string;
+  userType: string;
+};
+
+const EARLY_ACCESS_USER_TYPES = ["Customer", "Vendor"] as const;
+
 function isNonEmpty(s: unknown): s is string {
   return typeof s === "string" && s.trim().length > 0;
+}
+
+function isPhone(s: string): boolean {
+  return /^[0-9]{10}$/.test(s);
 }
 
 function isEmail(s: string): boolean {
@@ -105,6 +119,39 @@ export async function POST(req: Request) {
       email: payload.email.trim(),
       message: payload.message.trim(),
       subject: "Website contact form",
+    });
+    return NextResponse.json({ ok: true });
+  }
+
+  if (type === "early-access") {
+    const payload = b as unknown as EarlyAccessPayload;
+    if (
+      !isNonEmpty(payload.email) ||
+      !isNonEmpty(payload.phone) ||
+      !isNonEmpty(payload.location) ||
+      !isNonEmpty(payload.userType)
+    ) {
+      return NextResponse.json({ ok: false, error: "Missing required fields" }, { status: 400 });
+    }
+    if (!EARLY_ACCESS_USER_TYPES.includes(payload.userType.trim() as (typeof EARLY_ACCESS_USER_TYPES)[number])) {
+      return NextResponse.json({ ok: false, error: "Invalid user type" }, { status: 400 });
+    }
+    if (!isEmail(payload.email.trim())) {
+      return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
+    }
+    const phone = payload.phone.replace(/\D/g, "");
+    if (!isPhone(phone)) {
+      return NextResponse.json({ ok: false, error: "Enter a valid 10-digit mobile number" }, { status: 400 });
+    }
+    await forwardToBackend({
+      source: "early-access",
+      name: "Early Access",
+      email: payload.email.trim(),
+      phone,
+      location: payload.location.trim(),
+      userType: payload.userType.trim(),
+      subject: `Early access request (${payload.userType.trim()})`,
+      message: `User type: ${payload.userType.trim()}\nLocation: ${payload.location.trim()}`,
     });
     return NextResponse.json({ ok: true });
   }

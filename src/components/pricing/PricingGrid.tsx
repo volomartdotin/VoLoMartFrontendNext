@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
-  DOWNLOAD_APP_HREF,
   POPULAR_PLAN_SLUG,
   pricingCopy,
 } from "@/content/pricing";
@@ -15,10 +13,7 @@ import {
 } from "@/lib/plans-api";
 import { AnalyticsEvents } from "@/lib/analytics/events";
 import { trackClick } from "@/lib/analytics/track";
-
-const PLAY_STORE_URL =
-  "https://play.google.com/store/apps/details?id=com.volomart.app";
-const APP_STORE_URL = "https://apps.apple.com/app/volomart";
+import { EarlyAccessTrigger } from "@/components/early-access/EarlyAccessTrigger";
 
 function CheckIcon() {
   return (
@@ -141,12 +136,12 @@ export function PricingGrid() {
             <div className="shrink-0 text-center sm:text-right">
               <p className="text-4xl font-bold text-[#21153a]">₹0</p>
               <p className="text-sm text-[#5c6b63]">No card required</p>
-              <Link
-                href={DOWNLOAD_APP_HREF}
+              <EarlyAccessTrigger
+                trigger="pricing-trial"
                 className="mt-4 inline-flex rounded-full bg-[#8BC34A] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#74A73D]"
               >
                 Start free trial
-              </Link>
+              </EarlyAccessTrigger>
             </div>
           </div>
         </div>
@@ -198,10 +193,8 @@ export function PricingGrid() {
               </ul>
 
               <div className="mt-6 space-y-2">
-                <a
-                  href={PLAY_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <EarlyAccessTrigger
+                  trigger={`pricing-android-${plan.slug}`}
                   onClick={() =>
                     trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
                       planId: plan.id,
@@ -209,18 +202,16 @@ export function PricingGrid() {
                       platform: "android",
                     })
                   }
-                  className={`block rounded-xl px-4 py-3 text-center text-sm font-semibold transition ${
+                  className={`block w-full rounded-xl px-4 py-3 text-center text-sm font-semibold transition ${
                     isPopular
                       ? "bg-[#8BC34A] text-white hover:bg-[#74A73D]"
                       : "bg-[#21153a] text-white hover:opacity-90"
                   }`}
                 >
                   Get on Android
-                </a>
-                <a
-                  href={APP_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </EarlyAccessTrigger>
+                <EarlyAccessTrigger
+                  trigger={`pricing-ios-${plan.slug}`}
                   onClick={() =>
                     trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
                       planId: plan.id,
@@ -228,10 +219,10 @@ export function PricingGrid() {
                       platform: "ios",
                     })
                   }
-                  className="block rounded-xl border border-[#E2E8E4] px-4 py-3 text-center text-sm font-medium text-[#21153a] transition hover:bg-[#F3F2F6]"
+                  className="block w-full rounded-xl border border-[#E2E8E4] px-4 py-3 text-center text-sm font-medium text-[#21153a] transition hover:bg-[#F3F2F6]"
                 >
                   Get on iOS
-                </a>
+                </EarlyAccessTrigger>
               </div>
             </article>
           );
