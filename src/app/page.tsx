@@ -696,19 +696,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {servicesLoading &&
-              Array.from({ length: 6 }).map((_, index) => (
+              Array.from({ length: 8 }).map((_, index) => (
                 <article
                   key={`service-skeleton-${index}`}
-                  className="overflow-hidden rounded-2xl border border-[#E7E3EE] bg-white p-3 shadow-sm"
+                  className="overflow-hidden rounded-lg border border-[#F6F6F6] bg-white py-2"
                   aria-hidden
                 >
-                  <div className="aspect-[4/3] animate-pulse rounded-xl bg-[#E7E3EE]" />
-                  <div className="space-y-2 px-2 pb-2 pt-3">
-                    <div className="h-4 w-2/3 animate-pulse rounded bg-[#E7E3EE]" />
-                    <div className="h-3 w-full animate-pulse rounded bg-[#F3F2F6]" />
+                  <div className="mx-2 flex justify-center rounded-2xl bg-[#F6F6F6] px-4 py-6">
+                    <div className="h-28 w-28 animate-pulse rounded-full bg-[#E7E3EE] sm:h-32 sm:w-32" />
                   </div>
+                  <div className="mx-auto mt-4 h-4 w-2/3 animate-pulse rounded bg-[#E7E3EE]" />
                 </article>
               ))}
 
@@ -716,21 +715,20 @@ export default function Home() {
               serviceCategories.map((item) => (
                 <article
                   key={item._id}
-                  className="overflow-hidden rounded-2xl border border-[#E7E3EE] bg-white p-3 shadow-sm transition hover:shadow-md"
+                  className="overflow-hidden rounded-lg border border-[#F6F6F6] bg-white py-2 transition hover:border-[#E7E3EE] hover:shadow-sm"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-white">
-                    <img
-                      src={resolveNetworkImageUrl(item.image)}
-                      alt={item.name}
-                      className="h-full w-full object-contain p-3"
-                    />
+                  <div className="mx-2 flex justify-center rounded-2xl bg-[#F6F6F6] px-4 py-6">
+                    <div className="relative h-28 w-28 overflow-hidden rounded-full bg-white sm:h-32 sm:w-32">
+                      <img
+                        src={resolveNetworkImageUrl(item.image)}
+                        alt={item.name}
+                        className="h-full w-full object-contain p-1.5"
+                      />
+                    </div>
                   </div>
-                  <div className="px-2 pb-2 pt-3">
-                    <h3 className="text-base font-semibold text-[#1E1533]">{item.name}</h3>
-                    {item.description ? (
-                      <p className="mt-1 text-xs leading-relaxed text-[#8A8499]">{item.description}</p>
-                    ) : null}
-                  </div>
+                  <h3 className="mt-4 px-3 pb-2 text-center text-sm font-bold text-[#1E1533]">
+                    {item.name}
+                  </h3>
                 </article>
               ))}
           </div>
