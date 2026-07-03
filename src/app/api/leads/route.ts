@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getApiUrl } from "@/lib/api-config";
 
 type VendorPayload = {
   type: "vendor";
@@ -24,6 +25,22 @@ function isNonEmpty(s: unknown): s is string {
 
 function isEmail(s: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+}
+
+async function forwardToBackend(payload: Record<string, unknown>) {
+  try {
+    const res = await fetch(getApiUrl("/api/v1/web/leads"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("[leads] backend error:", res.status, text);
+    }
+  } catch (err) {
+    console.error("[leads] backend unreachable:", err);
+  }
 }
 
 export async function POST(req: Request) {
@@ -56,18 +73,21 @@ export async function POST(req: Request) {
     if (!isEmail(payload.email.trim())) {
       return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
     }
-    // Hook: forward to CRM, email, or sheet. For now, log in dev only.
-    if (process.env.NODE_ENV === "development") {
-      console.info("[lead:vendor]", {
-        shopName: payload.shopName.trim(),
-        ownerName: payload.ownerName.trim(),
-        phone: payload.phone.trim(),
-        email: payload.email.trim(),
-        city: payload.city.trim(),
-        category: payload.category.trim(),
-        notes: payload.notes?.trim(),
-      });
-    }
+    await forwardToBackend({
+      source: "vendor-register",
+      name: payload.ownerName.trim(),
+      email: payload.email.trim(),
+      phone: payload.phone.trim(),
+      subject: `Vendor lead: ${payload.shopName.trim()}`,
+      message: [
+        `Shop: ${payload.shopName.trim()}`,
+        `City: ${payload.city.trim()}`,
+        `Category: ${payload.category.trim()}`,
+        payload.notes?.trim() ? `Notes: ${payload.notes.trim()}` : "",
+      ]
+        .filter(Boolean)
+        .join("\n"),
+    });
     return NextResponse.json({ ok: true });
   }
 
@@ -79,13 +99,13 @@ export async function POST(req: Request) {
     if (!isEmail(payload.email.trim())) {
       return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
     }
-    if (process.env.NODE_ENV === "development") {
-      console.info("[lead:contact]", {
-        name: payload.name.trim(),
-        email: payload.email.trim(),
-        message: payload.message.trim(),
-      });
-    }
+    await forwardToBackend({
+      source: "contact",
+      name: payload.name.trim(),
+      email: payload.email.trim(),
+      message: payload.message.trim(),
+      subject: "Website contact form",
+    });
     return NextResponse.json({ ok: true });
   }
 
