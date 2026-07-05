@@ -23,55 +23,55 @@ const featureCards = [
   {
     title: "Explore Nearby Sellers",
     body: "Find vendors across India with location-aware discovery designed for hyperlocal commerce.",
-    src: "https://www.shutterstock.com/image-vector/india-map-pointer-mark-location-position-260nw-2240504927.jpg",
+    src: "/images/features/img_vendor.png",
   },
   {
     title: "All Services in One App",
     body: "Browse all local services like Grocery, Vegetable, Fruit, Dairy, Namkeen, and Flower from one place.",
-    src: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&w=520&q=80",
+    src: "/images/features/img_service.png",
   },
   {
     title: "Place Order in Seconds",
     body: "Select your preferred vendor, choose products, and place your order quickly with a smooth checkout flow.",
-    src: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=520&q=80",
+    src: "/images/features/img_place_order.png",
   },
 ] as const;
 
 const testimonialPeople = [
   {
-    name: "Alex Morgan",
+    name: "Anjali Deshmukh",
     role: "Happy Buyer",
     quote:
       "VoLoMart makes daily shopping simple. I can compare nearby vendors, place quick orders, and get groceries on time.",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=128&h=128&q=80",
+    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=128&h=128&q=80",
   },
   {
-    name: "Jordan Kim",
+    name: "Devansh Kulkarni",
     role: "Verified Customer",
     quote:
       "I can compare nearby vendors, check product details before ordering, and delivery tracking is clear and reliable.",
-    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=128&h=128&q=80",
+    img: "/images/testimonials/rahul-mehta.jpg",
   },
   {
-    name: "Shane Lee",
+    name: "Karan Bhardwaj",
     role: "Satisfied Customer",
     quote:
       "I used to wait in store queues every weekend. Now I order from local shops in minutes and still get the same trusted quality.",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=128&h=128&q=80",
+    img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=256&h=256&q=80",
   },
   {
-    name: "Taylor Brooks",
+    name: "Meera Krishnan",
     role: "Repeat Customer",
     quote:
       "I now order fruits, vegetables, and dairy from familiar vendors. Service feels personal, and any issues are resolved quickly.",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=128&h=128&q=80",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=128&h=128&q=80",
   },
   {
-    name: "Casey Nguyen",
+    name: "Arjun Malhotra",
     role: "Regular Buyer",
     quote:
       "Best hyperlocal app I have used so far. Great variety, fair pricing, and faster delivery from nearby shops.",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=128&h=128&q=80",
+    img: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=128&h=128&q=80",
   },
 ] as const;
 
@@ -82,23 +82,11 @@ const heroAvatars = [
   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=128&h=128&q=80",
 ];
 
-const phoneScreens = [
-  "/left.png",
-  "/center.png",
-  "/right.png",
-];
-
-const demoScreens = [
-  "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=520&q=80",
-  "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=520&q=80",
-  "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=520&q=80",
-  "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=520&q=80",
-  "https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=520&q=80",
-];
+const heroBannerImage = "/home-all.png";
 
 const howItWorksVisuals = [
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&h=400&q=80",
+  "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=400&h=400&q=80",
 ];
 
 
@@ -208,37 +196,13 @@ const vendorFaqItems = [
   },
 ] as const;
 
-function PhoneFrame({ src, className = "" }: { src: string; className?: string }) {
-  return (
-    <div
-      className={`rounded-[1.75rem] border-[10px] border-[#1e1533] bg-[#1e1533] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.55)] ${className}`}
-    >
-      <div className="aspect-[9/18.5] overflow-hidden rounded-[1.2rem] bg-[#0f0a1a]">
-        <img src={src} alt="" className="h-full w-full object-cover" />
-      </div>
-    </div>
-  );
-}
-
-function DemoPhoneFrame({ src, className = "" }: { src: string; className?: string }) {
-  return (
-    <div
-      className={`shrink-0 rounded-[1.25rem] border-[7px] border-[#1e1533] bg-[#1e1533] shadow-[0_18px_40px_-12px_rgba(0,0,0,0.45)] ${className}`}
-    >
-      <div className="aspect-[9/18.5] w-[118px] overflow-hidden rounded-[0.85rem] bg-[#0f0a1a] sm:w-[138px]">
-        <img src={src} alt="" className="h-full w-full object-cover" />
-      </div>
-    </div>
-  );
-}
-
 function FeaturePhoneFrame({ src }: { src: string }) {
   return (
-    <div className="mx-auto w-[148px] rounded-[1.15rem] border-[6px] border-[#1e1533] bg-[#1e1533] shadow-[0_14px_36px_-12px_rgba(0,0,0,0.35)] sm:w-[168px]">
-      <div className="aspect-[9/18.5] overflow-hidden rounded-[0.78rem] bg-[#0f0a1a]">
-        <img src={src} alt="" className="h-full w-full object-cover" />
-      </div>
-    </div>
+    <img
+      src={src}
+      alt=""
+      className="mx-auto h-auto w-full max-w-[168px] object-contain"
+    />
   );
 }
 
@@ -376,20 +340,12 @@ export default function Home() {
             </h1>
           </div>
 
-          <div className="relative mx-auto mt-12 max-w-6xl lg:mt-14">
-            <div className="relative z-10 mt-6 flex justify-center lg:mt-2">
-              <div className="flex max-w-5xl items-end justify-center gap-3 sm:gap-6 md:gap-10">
-                <div className="w-[30%] max-w-[220px] origin-bottom -rotate-6 translate-y-8 opacity-95 sm:translate-y-12">
-                  <PhoneFrame src={phoneScreens[0] ?? ""} />
-                </div>
-                <div className="z-20 w-[36%] max-w-[290px] -translate-y-3 scale-105 sm:max-w-[340px]">
-                  <PhoneFrame src={phoneScreens[1] ?? ""} />
-                </div>
-                <div className="w-[30%] max-w-[220px] origin-bottom rotate-6 translate-y-8 opacity-95 sm:translate-y-12">
-                  <PhoneFrame src={phoneScreens[2] ?? ""} />
-                </div>
-              </div>
-            </div>
+          <div className="relative z-10 mx-auto mt-10 max-w-6xl px-4 py-6 sm:mt-12 sm:py-8 lg:mt-14 lg:py-10">
+            <img
+              src={heroBannerImage}
+              alt="VoLoMart app screens showing orders, services, home, vendors, and profile"
+              className="mx-auto w-full object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.35)]"
+            />
           </div>
         </div>
       </section>
@@ -639,7 +595,7 @@ export default function Home() {
       </section>
 
       {/* App Demo */}
-      <section className="bg-white py-14 lg:py-20">
+      <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-6xl px-4 text-center lg:px-6">
           <p className="text-sm font-medium text-[#6B6278]">
             App Demo
@@ -648,32 +604,26 @@ export default function Home() {
             View <span className="text-[#8BC34A]">Our App Demo</span>
           </h2>
         </div>
-        <div className="mx-auto mt-10 max-w-6xl overflow-x-auto px-4 pb-4 lg:px-6">
-          <div className="flex min-w-[640px] items-end justify-center gap-0 pb-6 pt-4 sm:min-w-0">
-            {[
-              { src: demoScreens[0], cls: "origin-bottom -rotate-[14deg] translate-y-6 scale-[0.82] opacity-[0.92] z-[1]" },
-              { src: demoScreens[1], cls: "origin-bottom -rotate-[7deg] translate-y-3 scale-90 z-[2]" },
-              { src: demoScreens[2], cls: "origin-bottom z-[5] scale-[1.06]" },
-              { src: demoScreens[3], cls: "origin-bottom rotate-[7deg] translate-y-3 scale-90 z-[2]" },
-              { src: demoScreens[4], cls: "origin-bottom rotate-[14deg] translate-y-6 scale-[0.82] opacity-[0.92] z-[1]" },
-            ].map((item, i) => (
-              <div key={i} className={`relative -mx-2 sm:-mx-3 ${item.cls}`}>
-                <DemoPhoneFrame src={item.src} />
-                {i === 2 && (
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                    <button
-                      type="button"
-                      className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#8BC34A] text-white shadow-lg ring-4 ring-white/90 transition hover:bg-[#084236]"
-                      aria-label="Play app demo video"
-                    >
-                      <svg className="ml-0.5 h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                        <path d="M8 5v14l11-7L8 5z" />
-                      </svg>
-                    </button>
-                  </div>
-                )}
-              </div>
-            ))}
+        <div className="relative mx-auto mt-12 max-w-6xl px-4 lg:mt-14 lg:px-6">
+          <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_50px_-24px_rgba(0,0,0,0.45)]">
+            <div className="px-4 py-10 sm:px-6 sm:py-14 lg:py-16">
+              <img
+                src={heroBannerImage}
+                alt="VoLoMart app demo preview"
+                className="mx-auto block w-full object-contain"
+              />
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+              <button
+                type="button"
+                className="flex h-16 w-16 items-center justify-center rounded-full bg-[#8BC34A] text-white shadow-lg ring-4 ring-white/90 transition hover:bg-[#74A73D] sm:h-20 sm:w-20"
+                aria-label="Play app demo video"
+              >
+                <svg className="ml-1 h-8 w-8 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M8 5v14l11-7L8 5z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
