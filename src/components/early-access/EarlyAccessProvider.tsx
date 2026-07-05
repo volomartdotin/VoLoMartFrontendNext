@@ -27,7 +27,9 @@ export function EarlyAccessProvider({ children }: { children: React.ReactNode })
   const openEarlyAccess = useCallback((source?: string) => {
     setTrigger(source);
     setOpen(true);
-    trackClick(AnalyticsEvents.earlyAccessOpen, window.location.pathname, { trigger: source });
+    trackClick(AnalyticsEvents.earlyAccessOpen, window.location.pathname, {
+      trigger: source ?? "",
+    });
   }, []);
 
   const closeEarlyAccess = useCallback(() => {

@@ -99,7 +99,9 @@ export function EarlyAccessModal({ open, onClose, trigger }: Props) {
         return;
       }
       setStatus("success");
-      trackClick(AnalyticsEvents.earlyAccessSubmit, window.location.pathname, { trigger });
+      trackClick(AnalyticsEvents.earlyAccessSubmit, window.location.pathname, {
+        trigger: trigger ?? "",
+      });
       form.reset();
       setLocation("");
       setPhone("");
