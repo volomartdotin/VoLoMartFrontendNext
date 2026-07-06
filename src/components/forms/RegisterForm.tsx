@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnalyticsEvents } from "@/lib/analytics/events";
 import { trackClick } from "@/lib/analytics/track";
+import { submitVendorLead } from "@/lib/web-forms-api";
 import { categories } from "@/content/vendor";
 
 const categoryOptions = [...categories, "Other"] as const;
@@ -30,15 +31,10 @@ export function RegisterForm() {
     };
 
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = (await res.json()) as { ok?: boolean; error?: string };
-      if (!res.ok || !data.ok) {
+      const result = await submitVendorLead(payload);
+      if (!result.ok) {
         setStatus("error");
-        setError(data.error ?? "Something went wrong");
+        setError(result.error);
         return;
       }
       setStatus("success");

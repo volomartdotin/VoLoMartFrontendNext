@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/flatten-rsc.mjs",
+    "build:s3": "next build && node scripts/flatten-rsc.mjs",
+    "preview:s3": "npx --yes serve@14 out -l 3000",
+    "deploy:s3": "node scripts/deploy-s3.mjs",
     "start": "next start",
     "lint": "eslint"
   },

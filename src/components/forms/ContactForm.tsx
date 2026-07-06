@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnalyticsEvents } from "@/lib/analytics/events";
 import { trackClick } from "@/lib/analytics/track";
+import { submitContactLead } from "@/lib/web-forms-api";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -22,15 +23,10 @@ export function ContactForm() {
     };
 
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = (await res.json()) as { ok?: boolean; error?: string };
-      if (!res.ok || !data.ok) {
+      const result = await submitContactLead(payload);
+      if (!result.ok) {
         setStatus("error");
-        setError(data.error ?? "Something went wrong");
+        setError(result.error);
         return;
       }
       setStatus("success");

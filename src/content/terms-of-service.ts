@@ -359,7 +359,6 @@ const vendorBlocks: BlogBlock[] = [
   {
     type: "ul",
     items: [
-      "Firecracker Zone",
       "Grocery Spot",
       "Vegetable Corner",
       "Fruit Garden",
@@ -404,24 +403,24 @@ const vendorBlocks: BlogBlock[] = [
   },
   {
     type: "h2",
-    text: "Commission Structure",
+    text: "Vendor Subscription",
   },
   {
     type: "h3",
-    text: "Completely Free: Zero Charges Policy",
+    text: "Subscription Plans",
   },
   {
     type: "p",
-    text: "VoLoMart operates on a completely free model. We take no cut from your sales and charge no transaction fees. You keep 100% of your revenue with zero platform charges. This policy is free forever with no hidden fees or monthly charges.",
+    text: "VoLoMart operates on a subscription model. New vendors receive a 7-day trial with full dashboard access. After the trial, an active monthly or yearly subscription is required to keep your shop live, publish products, and receive orders. Current plans and pricing are listed on our pricing page and in the vendor app.",
   },
   {
     type: "ul",
     items: [
-      "No Registration Fee",
-      "No Monthly Charges",
-      "No Commission",
-      "No Transaction Fees",
-      "No Hidden Costs",
+      "7-day free trial for new vendors",
+      "Monthly or yearly billing options",
+      "Secure payments via Razorpay in the vendor app",
+      "Cancel or change plans anytime from the app",
+      "No sales commission — you keep 100% of order revenue",
     ],
   },
   {
@@ -735,7 +734,7 @@ export const vendorTerms: TermsOfServicePage = {
     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
   tldr: [
     "Vendors need valid licensing and must meet category and quality standards; prohibited items trigger immediate suspension and legal action.",
-    "Zero charges forever with no commission, no transaction fees, and no monthly or hidden costs, so you keep 100% of your revenue.",
+    "After a 7-day trial, an active monthly or yearly subscription is required to stay live. Plans are managed in the vendor app — see our pricing page for details.",
     "Meet fulfillment, communication, and performance standards (≥95% accuracy, ≥4.0 rating); support is available at support@volomart.in.",
   ],
   blocks: vendorBlocks,

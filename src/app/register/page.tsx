@@ -5,7 +5,7 @@ import { RegisterForm } from "@/components/forms/RegisterForm";
 
 export const metadata: Metadata = {
   title: "Register your shop",
-  description: "Apply to list your neighborhood store on VoLoMart. Free starter onboarding for qualifying vendors.",
+  description: "Apply to list your neighborhood store on VoLoMart. Start with a 7-day trial, then choose a monthly or yearly plan.",
   alternates: { canonical: "/register" },
   openGraph: {
     title: `Register your shop | ${site.name}`,

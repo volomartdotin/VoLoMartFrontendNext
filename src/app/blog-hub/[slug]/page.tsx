@@ -92,7 +92,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<Param
       <section className="mt-14 rounded-2xl bg-brand-light/60 px-6 py-8 text-center sm:px-10">
         <h2 className="text-lg font-semibold text-foreground">List your neighborhood shop on VoLoMart</h2>
         <p className="mt-2 text-sm text-muted">
-          Free starter onboarding for qualifying vendors. Reach nearby buyers who want local.
+          Starter onboarding with a 7-day trial. Monthly or yearly plans available after trial.
         </p>
         <Link
           href="/#download-app"

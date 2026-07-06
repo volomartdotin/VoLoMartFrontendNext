@@ -20,12 +20,12 @@ export const hero = {
   title: "Turn footfall into orders without a tech team.",
   subtitle:
     "VoLoMart helps kirana, produce sellers, dairy, bakery, and specialty shops get discovered by nearby customers, manage orders, and fulfil fast deliveries, all from one simple app.",
-  primaryCta: "Register your shop for free",
+  primaryCta: "Register your shop",
   primaryHref: "/register",
   secondaryCta: "Talk to us",
   secondaryHref: "/contact",
   bullets: [
-    "Free to list your shop (no setup fees on our starter program)",
+    "Start with a 7-day trial, then choose a monthly or yearly plan",
     "Reach buyers within ~3 km who already want local",
     "Live catalog and order alerts built for busy shopkeepers",
   ],
@@ -125,7 +125,7 @@ export const testimonial = {
 export const faq = [
   {
     q: "Does it cost money to register?",
-    a: "We’re onboarding vendors with a starter program focused on growth. Apply on the registration page and our team will confirm current benefits for your city.",
+    a: "Registration is free and includes a 7-day trial with full access. After the trial, you’ll need an active monthly or yearly subscription to stay live. See our pricing page for current plans.",
   },
   {
     q: "What do I need to get started?",

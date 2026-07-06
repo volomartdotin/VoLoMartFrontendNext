@@ -3,14 +3,7 @@
 import { useState } from "react";
 import { AnalyticsEvents } from "@/lib/analytics/events";
 import { trackClick } from "@/lib/analytics/track";
-
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function isValidEmail(email: string): boolean {
-  const trimmed = email.trim();
-  if (!trimmed || trimmed.length > 254) return false;
-  return EMAIL_REGEX.test(trimmed);
-}
+import { subscribeNewsletter } from "@/lib/web-forms-api";
 
 export function SubscribeForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -27,32 +20,15 @@ export function SubscribeForm() {
     const fd = new FormData(form);
     const email = String(fd.get("email") ?? "").trim();
 
-    if (!email) {
-      setStatus("error");
-      setError("Email is required.");
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      setStatus("error");
-      setError("Please enter a valid email address.");
-      return;
-    }
-
     try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      const data = (await res.json()) as { ok?: boolean; error?: string; message?: string };
-      if (!res.ok || !data.ok) {
+      const result = await subscribeNewsletter(email);
+      if (!result.ok) {
         setStatus("error");
-        setError(data.error ?? "Something went wrong. Please try again.");
+        setError(result.error);
         return;
       }
       setStatus("success");
-      setMessage(data.message ?? "Thank you for subscribing!");
+      setMessage(result.message);
       trackClick(AnalyticsEvents.subscribeSubmit, "/");
       form.reset();
     } catch {

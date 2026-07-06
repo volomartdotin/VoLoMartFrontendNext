@@ -100,7 +100,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "VoLoMart is onboarding florists, grocers, produce sellers, dairy counters, and specialty food shops across India. If you run a neighborhood store customers already trust, listing is free on our starter program. Register your shop and we’ll help you go live.",
+        text: "VoLoMart is onboarding florists, grocers, produce sellers, dairy counters, and specialty food shops across India. If you run a neighborhood store customers already trust, start with a 7-day trial and choose a subscription plan when you’re ready. Register your shop and we’ll help you go live.",
       },
       {
         type: "h2",
@@ -396,7 +396,7 @@ export const blogPosts: BlogPost[] = [
     tldr: [
       "Browse nearby vendors and track deliveries in one place.",
       "Vendors get order alerts, catalog edits, and payout visibility on mobile.",
-      "Register your shop free on our starter onboarding program.",
+      "Start with a 7-day trial, then choose a monthly or yearly subscription plan.",
     ],
     blocks: [
       {

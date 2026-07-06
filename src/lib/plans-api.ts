@@ -29,9 +29,7 @@ type PlansData = {
 
 export async function fetchPlans(): Promise<Plan[]> {
   try {
-    const data = await apiGet<PlansData>("/api/v1/plans", {
-      next: { revalidate: 300 },
-    });
+    const data = await apiGet<PlansData>("/api/v1/plans");
     const plans = data.plans ?? [];
     return plans.length > 0 ? plans : fallbackPlans;
   } catch {

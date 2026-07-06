@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const base = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.volomart.in").replace(/\/$/, "");
 
-const disallow = ["/api/", "/_next/static/", "/_next/data/"];
+const disallow = ["/_next/static/", "/_next/data/"];
 
 export default function robots(): MetadataRoute.Robots {
   return {
