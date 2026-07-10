@@ -172,10 +172,22 @@ export function PricingGrid() {
               <p className="mt-2 min-h-[2.5rem] text-sm leading-relaxed text-[#5c6b63]">{plan.description}</p>
 
               <div className="mt-6 border-b border-[#F3F2F6] pb-6">
-                <p className="text-3xl font-bold tracking-tight text-[#21153a]">
-                  {price?.displayPrice ?? "N/A"}
-                </p>
+                <div className="flex flex-wrap items-end gap-2">
+                  <p className="text-3xl font-bold tracking-tight text-[#21153a]">
+                    {price?.displayPrice ?? "N/A"}
+                  </p>
+                  {price?.displayOriginalPrice ? (
+                    <p className="pb-1 text-lg text-[#8A9A92] line-through">
+                      {price.displayOriginalPrice}
+                    </p>
+                  ) : null}
+                </div>
                 <p className="mt-1 text-sm text-[#5c6b63]">{yearly ? "billed yearly" : "billed monthly"}</p>
+                {price?.discountPercent ? (
+                  <p className="mt-2 text-xs font-semibold text-[#5A7F30]">
+                    {price.discountPercent}% off
+                  </p>
+                ) : null}
                 {yearly && savings ? (
                   <p className="mt-2 text-xs font-semibold text-[#5A7F30]">Save {savings}% vs monthly</p>
                 ) : null}

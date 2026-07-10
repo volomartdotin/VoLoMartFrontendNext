@@ -5,7 +5,10 @@ export type PlanPrice = {
   id: string;
   billingCycle: "MONTHLY" | "YEARLY";
   price: number;
+  originalPrice?: number | null;
   displayPrice: string;
+  displayOriginalPrice?: string | null;
+  discountPercent?: number | null;
 };
 
 export type Plan = {

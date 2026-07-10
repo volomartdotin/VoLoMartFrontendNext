@@ -1,3 +1,4 @@
+import { socialSameAs } from "@/content/social-links";
 import { site } from "@/content/vendor";
 import type { BlogPost } from "@/content/blogs";
 
@@ -21,13 +22,7 @@ export const organizationSchema = {
   email: site.supportEmail,
   description:
     "VoLoMart is a hyperlocal marketplace that helps neighborhood vendors get discovered by nearby customers, manage orders, and fulfil fast local deliveries.",
-  sameAs: [
-    "https://facebook.com/volomart",
-    "https://instagram.com/volomart.in",
-    "https://youtube.com/@volomart",
-    "https://x.com/volomartin",
-    "https://linkedin.com/company/volomart",
-  ],
+  sameAs: [...socialSameAs],
 } as const;
 
 export const websiteSchema = {

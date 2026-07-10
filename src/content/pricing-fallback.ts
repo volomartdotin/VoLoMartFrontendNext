@@ -1,11 +1,24 @@
 import type { Plan } from "@/lib/plans-api";
 
-function price(amount: number, cycle: "MONTHLY" | "YEARLY", id: string) {
+function price(
+  amount: number,
+  cycle: "MONTHLY" | "YEARLY",
+  id: string,
+  originalAmount?: number,
+) {
+  const hasDiscount = originalAmount != null && originalAmount > amount;
   return {
     id: `${id}-${cycle.toLowerCase()}`,
     billingCycle: cycle,
     price: amount,
+    originalPrice: hasDiscount ? originalAmount : null,
     displayPrice: `₹${(amount / 100).toFixed(0)}`,
+    displayOriginalPrice: hasDiscount
+      ? `₹${(originalAmount / 100).toFixed(0)}`
+      : null,
+    discountPercent: hasDiscount
+      ? Math.round(((originalAmount - amount) / originalAmount) * 100)
+      : null,
   };
 }
 
@@ -30,7 +43,10 @@ export const fallbackPlans: Plan[] = [
     productLimit: 30,
     isTrial: false,
     features: ["Up to 30 products", "Vendor dashboard", "Order management", "Email support"],
-    prices: [price(9900, "MONTHLY", "basic"), price(99900, "YEARLY", "basic")],
+    prices: [
+      price(9900, "MONTHLY", "basic", 19900),
+      price(99900, "YEARLY", "basic", 199900),
+    ],
   },
   {
     id: "starter",
