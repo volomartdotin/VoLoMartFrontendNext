@@ -42,7 +42,11 @@ export async function fetchPlans(): Promise<Plan[]> {
 
 export function formatProductLimit(limit: number): string {
   if (limit === -1) return "Unlimited products";
-  return `${limit} products`;
+  return `Up to ${limit} active products`;
+}
+
+export function isContactSalesPlan(plan: Plan): boolean {
+  return !plan.isTrial && plan.prices.length === 0;
 }
 
 export function getPriceForCycle(plan: Plan, yearly: boolean): PlanPrice | undefined {

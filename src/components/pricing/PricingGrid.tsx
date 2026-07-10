@@ -9,6 +9,7 @@ import {
   fetchPlans,
   formatProductLimit,
   getPriceForCycle,
+  isContactSalesPlan,
   type Plan,
 } from "@/lib/plans-api";
 import { AnalyticsEvents } from "@/lib/analytics/events";
@@ -147,9 +148,10 @@ export function PricingGrid() {
         </div>
       ) : null}
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {paidPlans.map((plan) => {
           const price = getPriceForCycle(plan, yearly);
+          const contactSales = isContactSalesPlan(plan);
           const isPopular = plan.isPopular ?? plan.slug === POPULAR_PLAN_SLUG;
           const savings = yearlySavingsPercent(plan);
 
@@ -174,21 +176,27 @@ export function PricingGrid() {
               <div className="mt-6 border-b border-[#F3F2F6] pb-6">
                 <div className="flex flex-wrap items-end gap-2">
                   <p className="text-3xl font-bold tracking-tight text-[#21153a]">
-                    {price?.displayPrice ?? "N/A"}
+                    {contactSales ? "Contact Sales" : (price?.displayPrice ?? "N/A")}
                   </p>
-                  {price?.displayOriginalPrice ? (
+                  {!contactSales && price?.displayOriginalPrice ? (
                     <p className="pb-1 text-lg text-[#8A9A92] line-through">
                       {price.displayOriginalPrice}
                     </p>
                   ) : null}
                 </div>
-                <p className="mt-1 text-sm text-[#5c6b63]">{yearly ? "billed yearly" : "billed monthly"}</p>
-                {price?.discountPercent ? (
+                <p className="mt-1 text-sm text-[#5c6b63]">
+                  {contactSales
+                    ? "Custom pricing for your business"
+                    : yearly
+                      ? "billed yearly"
+                      : "billed monthly"}
+                </p>
+                {!contactSales && price?.discountPercent ? (
                   <p className="mt-2 text-xs font-semibold text-[#5A7F30]">
                     {price.discountPercent}% off
                   </p>
                 ) : null}
-                {yearly && savings ? (
+                {!contactSales && yearly && savings ? (
                   <p className="mt-2 text-xs font-semibold text-[#5A7F30]">Save {savings}% vs monthly</p>
                 ) : null}
               </div>
@@ -205,36 +213,51 @@ export function PricingGrid() {
               </ul>
 
               <div className="mt-6 space-y-2">
-                <EarlyAccessTrigger
-                  trigger={`pricing-android-${plan.slug}`}
-                  onClick={() =>
-                    trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
-                      planId: plan.id,
-                      planName: plan.name,
-                      platform: "android",
-                    })
-                  }
-                  className={`block w-full rounded-xl px-4 py-3 text-center text-sm font-semibold transition ${
-                    isPopular
-                      ? "bg-[#8BC34A] text-white hover:bg-[#74A73D]"
-                      : "bg-[#21153a] text-white hover:opacity-90"
-                  }`}
-                >
-                  Get on Android
-                </EarlyAccessTrigger>
-                <EarlyAccessTrigger
-                  trigger={`pricing-ios-${plan.slug}`}
-                  onClick={() =>
-                    trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
-                      planId: plan.id,
-                      planName: plan.name,
-                      platform: "ios",
-                    })
-                  }
-                  className="block w-full rounded-xl border border-[#E2E8E4] px-4 py-3 text-center text-sm font-medium text-[#21153a] transition hover:bg-[#F3F2F6]"
-                >
-                  Get on iOS
-                </EarlyAccessTrigger>
+                {contactSales ? (
+                  <a
+                    href="mailto:support@volomart.in?subject=VoLoMart%20Enterprise%20Plan"
+                    className={`block w-full rounded-xl px-4 py-3 text-center text-sm font-semibold transition ${
+                      isPopular
+                        ? "bg-[#8BC34A] text-white hover:bg-[#74A73D]"
+                        : "bg-[#21153a] text-white hover:opacity-90"
+                    }`}
+                  >
+                    Contact Sales
+                  </a>
+                ) : (
+                  <>
+                    <EarlyAccessTrigger
+                      trigger={`pricing-android-${plan.slug}`}
+                      onClick={() =>
+                        trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
+                          planId: plan.id,
+                          planName: plan.name,
+                          platform: "android",
+                        })
+                      }
+                      className={`block w-full rounded-xl px-4 py-3 text-center text-sm font-semibold transition ${
+                        isPopular
+                          ? "bg-[#8BC34A] text-white hover:bg-[#74A73D]"
+                          : "bg-[#21153a] text-white hover:opacity-90"
+                      }`}
+                    >
+                      Get on Android
+                    </EarlyAccessTrigger>
+                    <EarlyAccessTrigger
+                      trigger={`pricing-ios-${plan.slug}`}
+                      onClick={() =>
+                        trackClick(AnalyticsEvents.pricingPlanCta, "/pricing", {
+                          planId: plan.id,
+                          planName: plan.name,
+                          platform: "ios",
+                        })
+                      }
+                      className="block w-full rounded-xl border border-[#E2E8E4] px-4 py-3 text-center text-sm font-medium text-[#21153a] transition hover:bg-[#F3F2F6]"
+                    >
+                      Get on iOS
+                    </EarlyAccessTrigger>
+                  </>
+                )}
               </div>
             </article>
           );

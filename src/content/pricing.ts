@@ -11,7 +11,7 @@ export const pricingCopy = {
   faqs: [
     {
       q: "How does the free trial work?",
-      a: "New vendors receive 7 days of full access with up to 20 products. No payment is required to start. Register your shop in the app and begin listing products immediately.",
+      a: "New vendors receive 7 days of full access with up to 30 products. No payment is required to start. Register your shop in the app and begin listing products immediately.",
     },
     {
       q: "When do I need to upgrade?",
@@ -30,4 +30,4 @@ export const pricingCopy = {
 
 export const DOWNLOAD_APP_HREF = "/#download-app";
 
-export const POPULAR_PLAN_SLUG = "starter";
+export const POPULAR_PLAN_SLUG = "growth";
