@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "N95N7G4RD6.com.volomart.app",
+        "paths": ["/store", "/store/*", "/app", "/app/*"]
+      }
+    ]
+  }
+}
