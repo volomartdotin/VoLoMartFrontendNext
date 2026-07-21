@@ -13,6 +13,14 @@ export function playStoreUrl(storeId?: string): string {
   return `${PLAY_STORE}${sep}referrer=${referrer}`;
 }
 
+/** Build Play Store URL with install referrer for a deferred offerId. */
+export function playStoreUrlForOffer(offerId?: string): string {
+  if (!offerId) return PLAY_STORE;
+  const referrer = encodeURIComponent(`offerId=${offerId}`);
+  const sep = PLAY_STORE.includes("?") ? "&" : "?";
+  return `${PLAY_STORE}${sep}referrer=${referrer}`;
+}
+
 export function appStoreUrl(): string {
   return APP_STORE;
 }
